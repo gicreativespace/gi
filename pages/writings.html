@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>GI.Writings — GI Creative Space</title>
+
+  <meta
+    name="description"
+    content="GI.Writings — Stories, memories, poetry and village tales."
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/styles.css"
+  >
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <a
+        href="../index.html"
+        class="brand"
+      >
+        <span class="brand-mark">GI</span>
+
+        <span class="brand-name">
+          Creative Space
+        </span>
+      </a>
+
+
+      <nav
+        class="main-nav"
+        id="main-navigation"
+      >
+
+        <a href="../index.html">
+          హోమ్
+        </a>
+
+        <button
+          id="worlds-button"
+          type="button"
+          aria-expanded="false"
+        >
+          విశ్వం
+        </button>
+
+        <a href="#stories">
+          రచనలు
+        </a>
+
+        <a href="#categories">
+          విభాగాలు
+        </a>
+
+        <a href="#contact">
+          సంప్రదించండి
+        </a>
+
+      </nav>
+
+
+      <div class="language-switch">
+
+        <button
+          class="language-button active"
+          data-language="te"
+          type="button"
+        >
+          తెలుగు
+        </button>
+
+        <span>|</span>
+
+        <button
+          class="language-button"
+          data-language="en"
+          type="button"
+        >
+          EN
+        </button>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-button"
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+
+    <!-- ===================================================
+         WORLDS MENU
+         =================================================== -->
+
+    <div
+      class="worlds-menu"
+      id="worlds-menu"
+      aria-hidden="true"
+    >
+
+      <div class="worlds-menu-inner">
+
+        <div class="worlds-intro">
+
+          <span>
+            GI CREATIVE SPACE
+          </span>
+
+          <h2>
+            మన ఐదు ప్రపంచాలు
+          </h2>
+
+          <p>
+            ఒకే విశ్వం • ఐదు సృజనాత్మక శక్తులు
+          </p>
+
+        </div>
+
+        <div
+          class="worlds-mini-grid"
+          id="worlds-mini-grid"
+        ></div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <section class="hero writings-hero">
+
+      <div
+        class="hero-background"
+        id="writings-hero-background"
+      ></div>
+
+      <div class="hero-overlay"></div>
+
+
+      <div class="hero-content">
+
+        <div class="hero-overline">
+          GI.WRITINGS • WATER
+        </div>
+
+
+        <h1 id="writings-title">
+          భావాలు ప్రవహించే చోటు.
+        </h1>
+
+
+        <p
+          class="hero-tagline"
+          id="writings-tagline"
+        >
+          Where Feelings Flow.
+        </p>
+
+
+        <p
+          class="hero-description"
+          id="writings-description"
+        >
+          గోదావరి గట్టున పుట్టిన కథలు,
+          జ్ఞాపకాలు, మనుషులు,
+          మట్టి వాసన, మనసులో మిగిలిన మాటలు.
+        </p>
+
+
+        <a
+          href="#stories"
+          class="primary-button"
+        >
+          కథల్లోకి రండి →
+        </a>
+
+      </div>
+
+
+      <div class="hero-scroll">
+
+        SCROLL
+
+        <i></i>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         INTRO
+         =================================================== -->
+
+    <section class="philosophy-section">
+
+      <div class="section-container">
+
+        <span class="section-label">
+          GI.WRITINGS
+        </span>
+
+
+        <h2 id="writings-intro">
+          కొన్ని కథలు చదవడానికి కాదు...
+          అనుభవించడానికి.
+        </h2>
+
+
+        <p class="section-description">
+
+          మాటల్లో చెప్పలేని కొన్ని భావాలు
+          అక్షరాల్లో కనిపిస్తాయి.
+          మనుషులు, ఊర్లు, జ్ఞాపకాలు,
+          ప్రకృతి — ఇవన్నీ కలిసిన
+          మన రచనల ప్రపంచం GI.Writings.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         CATEGORIES
+         =================================================== -->
+
+    <section
+      class="worlds-section"
+      id="categories"
+    >
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <span class="section-label">
+            EXPLORE
+          </span>
+
+          <h2>
+            మన కథల ప్రపంచాలు.
+          </h2>
+
+          <p>
+            ప్రతి భావానికి ఒక చోటు.
+          </p>
+
+        </div>
+
+
+        <div
+          class="world-grid"
+          id="writing-categories"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         FEATURED
+         =================================================== -->
+
+    <section class="philosophy-section">
+
+      <div class="section-container">
+
+        <span class="section-label">
+          FEATURED
+        </span>
+
+        <h2 id="featured-title">
+          ఈ రోజు ఒక కథ
+        </h2>
+
+        <p class="section-description">
+          ఈ రోజు మనసుకు దగ్గరైన ఒక రచన.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         POSTS
+         =================================================== -->
+
+    <section
+      class="projects-section"
+      id="stories"
+    >
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <span class="section-label">
+            WRITINGS
+          </span>
+
+          <h2>
+            అక్షరాల్లో మన ప్రపంచం.
+          </h2>
+
+          <p>
+            కథలు • జ్ఞాపకాలు • కవితలు • ఊరి కబుర్లు
+          </p>
+
+        </div>
+
+
+        <div
+          class="projects-grid"
+          id="writing-posts"
+        >
+
+          <!-- Posts loaded from JSON -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         CTA
+         =================================================== -->
+
+    <section
+      class="contact-section"
+      id="contact"
+    >
+
+      <div class="section-container">
+
+        <span class="section-label">
+          GI.WRITINGS
+        </span>
+
+
+        <h2 id="writing-cta-title">
+          మీ కథ కూడా ఇక్కడ మొదలవచ్చు.
+        </h2>
+
+
+        <p id="writing-cta-description">
+          ఒక జ్ఞాపకం కావచ్చు...
+          ఒక అనుభవం కావచ్చు...
+          ఒక చిన్న ఆలోచన కావచ్చు.
+        </p>
+
+
+        <a
+          href="#stories"
+          id="writing-cta-button"
+          class="contact-button"
+        >
+          కథల ప్రపంచంలోకి →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+          GI
+        </div>
+
+        <div>
+
+          <strong>
+            GI Creative Space
+          </strong>
+
+          <p>
+            Godavari Roots. Ippanapadu Soul.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="../index.html">
+          హోమ్
+        </a>
+
+        <a href="#categories">
+          విభాగాలు
+        </a>
+
+        <a href="#stories">
+          రచనలు
+        </a>
+
+        <a href="#contact">
+          సంప్రదించండి
+        </a>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="current-year"></span>
+          GI Creative Space
+        </span>
+
+        <span>
+          Stories that flow.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="../assets/js/site-data.js"></script>
+
+  <script src="../assets/js/app.js"></script>
+
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      async () => {
+
+        try {
+
+          const response =
+            await fetch("../data/writings.json");
+
+          if (!response.ok) {
+            throw new Error(
+              "Unable to load writings.json"
+            );
+          }
+
+          const data =
+            await response.json();
+
+
+          /* ===============================================
+             HERO
+             =============================================== */
+
+          document.getElementById(
+            "writings-title"
+          ).textContent =
+            data.section.title.te;
+
+
+          document.getElementById(
+            "writings-tagline"
+          ).textContent =
+            data.section.title.en;
+
+
+          document.getElementById(
+            "writings-description"
+          ).textContent =
+            data.section.description.te;
+
+
+          document.getElementById(
+            "writings-intro"
+          ).textContent =
+            data.intro.te;
+
+
+          /* ===============================================
+             HERO IMAGE
+             =============================================== */
+
+          const hero =
+            document.getElementById(
+              "writings-hero-background"
+            );
+
+          if (hero) {
+
+            hero.style.backgroundImage =
+              `
+              linear-gradient(
+                rgba(3, 14, 18, 0.72),
+                rgba(3, 14, 18, 0.88)
+              ),
+              url("${data.section.heroImage}")
+              `;
+
+          }
+
+
+          /* ===============================================
+             CATEGORIES
+             =============================================== */
+
+          const categories =
+            document.getElementById(
+              "writing-categories"
+            );
+
+
+          if (categories) {
+
+            categories.innerHTML =
+              data.categories
+                .map(category => `
+
+                  <article
+                    class="world-card writing-category"
+                  >
+
+                    <div
+                      class="world-card-visual"
+                    >
+
+                      <span class="element-symbol">
+                        ≋
+                      </span>
+
+                    </div>
+
+
+                    <div
+                      class="world-card-content"
+                    >
+
+                      <span class="element-name">
+                        GI.WRITINGS
+                      </span>
+
+                      <h3>
+                        ${category.title.te}
+                      </h3>
+
+                      <p>
+                        ${category.description.te}
+                      </p>
+
+                      <a
+                        href="#stories"
+                        data-category="
+                          ${category.id}
+                        "
+                      >
+                        రచనలు చూడండి →
+                      </a>
+
+                    </div>
+
+                  </article>
+
+                `)
+                .join("");
+
+          }
+
+
+          /* ===============================================
+             FEATURED
+             =============================================== */
+
+          if (data.featured) {
+
+            const featuredTitle =
+              document.getElementById(
+                "featured-title"
+              );
+
+            if (featuredTitle) {
+
+              featuredTitle.textContent =
+                data.featured.title.te;
+
+            }
+
+          }
+
+
+          /* ===============================================
+             POSTS
+             =============================================== */
+
+          const posts =
+            document.getElementById(
+              "writing-posts"
+            );
+
+
+          if (posts) {
+
+            if (
+              !data.posts ||
+              data.posts.length === 0
+            ) {
+
+              posts.innerHTML = `
+
+                <div class="projects-empty">
+
+                  <span>GI</span>
+
+                  <p>
+                    త్వరలో కొత్త రచనలు
+                    ఇక్కడ కనిపిస్తాయి.
+                  </p>
+
+                </div>
+
+              `;
+
+            } else {
+
+              posts.innerHTML =
+                data.posts
+                  .map(post => `
+
+                    <article
+                      class="project-card writing-post"
+                      data-category="
+                        ${post.category}
+                      "
+                    >
+
+                      <a
+                        href="${post.link}"
+                        class="project-card-link"
+                      >
+
+                        <div
+                          class="project-image"
+                          style="
+                            background-image:
+                            url('${post.image}');
+                          "
+                        ></div>
+
+
+                        <div
+                          class="project-content"
+                        >
+
+                          <span>
+                            ${post.category}
+                          </span>
+
+
+                          <h3>
+                            ${post.title.te}
+                          </h3>
+
+
+                          <p>
+                            ${post.excerpt.te}
+                          </p>
+
+
+                          <small>
+                            ${post.date}
+                            •
+                            ${post.readTime}
+                          </small>
+
+
+                          <strong>
+                            చదవండి →
+                          </strong>
+
+                        </div>
+
+                      </a>
+
+                    </article>
+
+                  `)
+                  .join("");
+
+            }
+
+          }
+
+
+          /* ===============================================
+             CTA
+             =============================================== */
+
+          document.getElementById(
+            "writing-cta-title"
+          ).textContent =
+            data.cta.title.te;
+
+
+          document.getElementById(
+            "writing-cta-description"
+          ).textContent =
+            data.cta.description.te;
+
+
+          const ctaButton =
+            document.getElementById(
+              "writing-cta-button"
+            );
+
+          if (ctaButton) {
+
+            ctaButton.textContent =
+              data.cta.button.te;
+
+            ctaButton.href =
+              data.cta.link;
+
+          }
+
+
+        } catch (error) {
+
+          console.error(
+            "GI.Writings:",
+            error
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
