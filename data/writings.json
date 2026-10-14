@@ -1,0 +1,174 @@
+{
+  "section": {
+    "id": "writings",
+    "name": "GI.Writings",
+
+    "element": {
+      "te": "జలం",
+      "en": "WATER"
+    },
+
+    "title": {
+      "te": "భావాలు ప్రవహించే చోటు.",
+      "en": "Where Feelings Flow."
+    },
+
+    "description": {
+      "te": "గోదావరి గట్టున పుట్టిన కథలు, జ్ఞాపకాలు, మనుషులు, మట్టి వాసన, మనసులో మిగిలిన మాటలు.",
+      "en": "Stories, memories, people, earthy moments and words born along the Godavari."
+    },
+
+    "heroImage": "assets/images/writings/hero.jpg"
+  },
+
+  "intro": {
+    "te": "కొన్ని కథలు చదవడానికి కాదు... అనుభవించడానికి.",
+    "en": "Some stories are not meant to be read... but felt."
+  },
+
+  "categories": [
+    {
+      "id": "stories",
+      "title": {
+        "te": "కథలు",
+        "en": "Stories"
+      },
+      "description": {
+        "te": "మనుషుల మధ్య, మన ఊర్ల మధ్య పుట్టిన కథలు.",
+        "en": "Stories born between people and places."
+      }
+    },
+
+    {
+      "id": "memories",
+      "title": {
+        "te": "జ్ఞాపకాలు",
+        "en": "Memories"
+      },
+      "description": {
+        "te": "నిన్నటి రోజులను మళ్లీ గుర్తు చేసే జ్ఞాపకాలు.",
+        "en": "Memories that bring yesterday back to life."
+      }
+    },
+
+    {
+      "id": "poetry",
+      "title": {
+        "te": "కవితలు",
+        "en": "Poetry"
+      },
+      "description": {
+        "te": "మనసులో పుట్టిన భావాలకు అక్షరాల రూపం.",
+        "en": "Feelings transformed into words."
+      }
+    },
+
+    {
+      "id": "village",
+      "title": {
+        "te": "ఊరి కబుర్లు",
+        "en": "Village Stories"
+      },
+      "description": {
+        "te": "ఊరి అరుగు, గోదావరి గట్టు, మనుషుల మధ్య నడిచే కబుర్లు.",
+        "en": "Conversations from village corners, Godavari banks and everyday life."
+      }
+    }
+  ],
+
+  "posts": [
+
+    {
+      "id": "ippanapadu-stories",
+
+      "category": "village",
+
+      "title": {
+        "te": "ఇప్పనపాడు కథలు",
+        "en": "Ippanapadu Stories"
+      },
+
+      "excerpt": {
+        "te": "ఊరి అరుగు నుంచి గోదావరి గట్టు వరకు మనసుకు దగ్గరైన కబుర్లు.",
+        "en": "Stories that travel from village corners to the banks of the Godavari."
+      },
+
+      "description": {
+        "te": "మన ఊరు, మనుషులు, మట్టి వాసన, చిన్న చిన్న సంఘటనలు కలిసిన కథల ప్రపంచం.",
+        "en": "A world of stories shaped by villages, people, earthy memories and everyday moments."
+      },
+
+      "image": "assets/images/writings/ippanapadu-stories.jpg",
+
+      "date": "2026-10-14",
+
+      "author": "GI.Writings",
+
+      "readTime": "5 min",
+
+      "link": "#",
+
+      "featured": true
+    },
+
+    {
+      "id": "appatlo-ippatlo",
+
+      "category": "village",
+
+      "title": {
+        "te": "అప్పట్లో… ఇప్పట్లో!",
+        "en": "Then… and Now!"
+      },
+
+      "excerpt": {
+        "te": "కాలం మారినా… ప్రకృతితో మన బంధం మారకూడదు.",
+        "en": "Times change… our bond with nature should not."
+      },
+
+      "description": {
+        "te": "ఉడత, పిచ్చుకల చూపులో మన ఊరు, మన ప్రకృతి, మన జీవన విధానాన్ని చెప్పే కథలు.",
+        "en": "Stories about village life, nature and changing times through the eyes of a squirrel and sparrow."
+      },
+
+      "image": "assets/images/writings/appatlo-ippatlo.jpg",
+
+      "date": "2026-10-14",
+
+      "author": "GI.Writings",
+
+      "readTime": "4 min",
+
+      "link": "#",
+
+      "featured": true
+    }
+
+  ],
+
+  "featured": {
+    "title": {
+      "te": "ఈ రోజు ఒక కథ",
+      "en": "A Story for Today"
+    }
+  },
+
+  "cta": {
+    "title": {
+      "te": "మీ కథ కూడా ఇక్కడ మొదలవచ్చు.",
+      "en": "Your story can begin here too."
+    },
+
+    "description": {
+      "te": "ఒక జ్ఞాపకం కావచ్చు... ఒక అనుభవం కావచ్చు... ఒక చిన్న ఆలోచన కావచ్చు.",
+      "en": "It could be a memory, an experience, or simply a little thought."
+    },
+
+    "button": {
+      "te": "కథల ప్రపంచంలోకి →",
+      "en": "Enter the World of Stories →"
+    },
+
+    "link": "#posts"
+  }
+}
