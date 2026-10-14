@@ -1,0 +1,143 @@
+{
+  "section": {
+    "id": "education",
+    "name": "GI.Education",
+
+    "element": {
+      "te": "భూమి",
+      "en": "EARTH"
+    },
+
+    "title": {
+      "te": "జ్ఞానం ఎదిగే నేల.",
+      "en": "Where Knowledge Takes Root."
+    },
+
+    "description": {
+      "te": "కొత్త విషయాలను సులభంగా నేర్చుకోవడం, ఆలోచించడం, సృష్టించడం మరియు భవిష్యత్తుకు సిద్ధమవ్వడం కోసం ఒక సృజనాత్మక విద్యా ప్రపంచం.",
+      "en": "A creative learning world for understanding, thinking, creating and preparing for the future."
+    },
+
+    "heroImage": "assets/images/education/hero.jpg"
+  },
+
+  "intro": {
+    "te": "ప్రతి ప్రశ్న ఒక మొదలు. ప్రతి నేర్చుకున్న విషయం ఒక కొత్త అడుగు.",
+    "en": "Every question is a beginning. Every lesson is a step forward."
+  },
+
+  "categories": [
+    {
+      "id": "ai-learning",
+
+      "title": {
+        "te": "AI & టెక్నాలజీ",
+        "en": "AI & Technology"
+      },
+
+      "description": {
+        "te": "AI, డిజిటల్ టూల్స్ మరియు కొత్త టెక్నాలజీలను సులభంగా అర్థం చేసుకునే కంటెంట్.",
+        "en": "Simple and practical learning around AI, digital tools and emerging technologies."
+      },
+
+      "icon": "✦",
+
+      "image": "assets/images/education/ai-learning.jpg"
+    },
+
+    {
+      "id": "digital-skills",
+
+      "title": {
+        "te": "డిజిటల్ స్కిల్స్",
+        "en": "Digital Skills"
+      },
+
+      "description": {
+        "te": "డిజిటల్ ప్రపంచంలో ఉపయోగపడే నైపుణ్యాలను step-by-stepగా నేర్చుకునే మార్గం.",
+        "en": "A practical path to learning useful skills for the digital world."
+      },
+
+      "icon": "◇",
+
+      "image": "assets/images/education/digital-skills.jpg"
+    },
+
+    {
+      "id": "creative-learning",
+
+      "title": {
+        "te": "క్రియేటివ్ లెర్నింగ్",
+        "en": "Creative Learning"
+      },
+
+      "description": {
+        "te": "రాయడం, డిజైన్, వీడియో మరియు కొత్త ఆలోచనలను సృజనాత్మకంగా అభివృద్ధి చేయడం.",
+        "en": "Developing creativity through writing, design, video and new ideas."
+      },
+
+      "icon": "✧",
+
+      "image": "assets/images/education/creative-learning.jpg"
+    },
+
+    {
+      "id": "future-skills",
+
+      "title": {
+        "te": "భవిష్యత్ నైపుణ్యాలు",
+        "en": "Future Skills"
+      },
+
+      "description": {
+        "te": "మారుతున్న ప్రపంచానికి అవసరమైన కొత్త ఆలోచనలు, నైపుణ్యాలు మరియు అవకాశాలను తెలుసుకోవడం.",
+        "en": "Discovering the ideas, skills and opportunities needed for a changing world."
+      },
+
+      "icon": "∞",
+
+      "image": "assets/images/education/future-skills.jpg"
+    }
+  ],
+
+  "courses": [],
+
+  "lessons": [],
+
+  "resources": [],
+
+  "featured": {
+    "title": {
+      "te": "ఈ రోజు ఒక కొత్త విషయం నేర్చుకుందాం.",
+      "en": "Learn Something New Today."
+    },
+
+    "description": {
+      "te": "చిన్నగా నేర్చుకున్న విషయం కూడా భవిష్యత్తులో పెద్ద మార్పుకు కారణం కావచ్చు.",
+      "en": "Even a small lesson today can create a big change tomorrow."
+    },
+
+    "image": "assets/images/education/featured.jpg",
+
+    "link": "#"
+  },
+
+  "cta": {
+    "title": {
+      "te": "నేర్చుకోవడం మొదలుపెడదామా?",
+      "en": "Ready to Start Learning?"
+    },
+
+    "description": {
+      "te": "మీకు ఆసక్తి ఉన్న విషయాన్ని ఎంచుకోండి. మనం కలిసి నేర్చుకుందాం.",
+      "en": "Choose something you're curious about. Let's learn together."
+    },
+
+    "button": {
+      "te": "నేర్చుకునే ప్రపంచంలోకి →",
+      "en": "Enter the Learning World →"
+    },
+
+    "link": "#explore"
+  }
+}
