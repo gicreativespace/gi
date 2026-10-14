@@ -1,366 +1,266 @@
 /* =========================================================
    GI CREATIVE SPACE
-   SITE DATA
-   Edit this file to update website content later.
+   CENTRAL SITE DATA
    ========================================================= */
 
-const GI_SITE_DATA = {
+const GI_SITE = {
 
-  /* =======================================================
+  /* -------------------------------------------------------
      BRAND
-     ======================================================= */
+     ------------------------------------------------------- */
 
   brand: {
     name: "GI Creative Space",
 
+    shortName: "GI",
+
     tagline: {
-      te: "గోదావరి మూలాలు. ఇప్పనపాడు ఆత్మ.",
-      en: "Godavari Roots. Ippanapadu Soul."
+      te: "ఆలోచనలు ప్రవహించే ప్రపంచం",
+      en: "Where Ideas Flow Into Vision."
     },
 
-    shortTagline: {
-      te: "గోదావరి మన గుర్తింపు • ఇప్పనపాడు మన మూలం",
-      en: "Godavari is our identity • Ippanapadu is our root"
+    origin: {
+      te: "గోదావరి మూలాలు • ఇప్పనపాడు ఆత్మ",
+      en: "Godavari Roots • Ippanapadu Soul"
+    },
+
+    logo: {
+      type: "image",
+      src: "assets/images/brand/gi-logo.png",
+      fallback: "GI"
     }
   },
 
 
-  /* =======================================================
-     ENTRY SCREEN
-     ======================================================= */
-
-  entry: {
-    title: {
-      te: "ఒక కొత్త ప్రపంచంలోకి స్వాగతం",
-      en: "Welcome to a New World"
-    },
-
-    description: {
-      te: "ఆలోచనలకు రూపం ఇచ్చే సృజనాత్మక ప్రపంచం.",
-      en: "A creative world where ideas take shape."
-    },
-
-    button: {
-      te: "ప్రపంచంలోకి ప్రవేశించండి",
-      en: "Enter the World"
-    }
-  },
-
-
-  /* =======================================================
-     PHILOSOPHY
-     ======================================================= */
-
-  philosophy: {
-    label: {
-      te: "మన ఆలోచన",
-      en: "Our Philosophy"
-    },
-
-    title: {
-      te: "ఒకే విశ్వం. ఐదు సృజనాత్మక శక్తులు.",
-      en: "One Universe. Five Creative Forces."
-    },
-
-    description: {
-      te:
-        "GI Creative Space అనేది కేవలం ఒక వేదిక కాదు. " +
-        "గోదావరి మన గుర్తింపు, ఇప్పనపాడు మన మూలం, " +
-        "సృజనాత్మకత మన ప్రయాణం.",
-
-      en:
-        "GI Creative Space is more than a platform. " +
-        "Godavari is our identity, Ippanapadu is our root, " +
-        "and creativity is our journey."
-    }
-  },
-
-
-  /* =======================================================
-     FIVE CREATIVE WORLDS
-     ======================================================= */
+  /* -------------------------------------------------------
+     MAIN WORLDS
+     ------------------------------------------------------- */
 
   worlds: [
 
     {
-      id: "education",
+      id: "media",
 
-      number: "01",
+      name: {
+        te: "GI.Media",
+        en: "GI.Media"
+      },
 
       element: {
-        te: "భూమి",
-        en: "EARTH"
+        te: "వాయువు",
+        en: "Air"
       },
 
-      name: "GI.Education",
-
-      title: {
-        te: "నేర్చుకోవడం • ఎదగడం",
-        en: "Learn • Grow"
-      },
+      symbol: "〰",
 
       description: {
-        te:
-          "నేర్చుకోవడం, నైపుణ్యాలు, AI మరియు " +
-          "భవిష్యత్తు విద్యకు ఒక సృజనాత్మక వేదిక.",
-
-        en:
-          "A creative space for learning, skills, " +
-          "AI and future education."
+        te: "వీడియోలు, డిజైన్, డిజిటల్ కంటెంట్ మరియు సృజనాత్మక మీడియా.",
+        en: "Videos, design, digital content and creative media."
       },
 
-      symbol: "◉",
+      link: "pages/media.html",
 
-      image: "assets/images/worlds/earth.jpg",
-
-      link: "pages/education.html",
-
-      status: "future"
+      image: "assets/images/worlds/media.jpg"
     },
 
 
     {
       id: "writings",
 
-      number: "02",
+      name: {
+        te: "GI.Writings",
+        en: "GI.Writings"
+      },
 
       element: {
         te: "జలం",
-        en: "WATER"
+        en: "Water"
       },
 
-      name: "GI.Writings",
-
-      title: {
-        te: "కథలు • భావాలు",
-        en: "Stories • Feelings"
-      },
+      symbol: "≈",
 
       description: {
-        te:
-          "కథలు, కవితలు, జ్ఞాపకాలు, " +
-          "ఆలోచనలు మరియు మనసుకు దగ్గరైన భావాలు.",
-
-        en:
-          "Stories, poems, memories, thoughts " +
-          "and feelings that stay close to the heart."
+        te: "కథలు, జ్ఞాపకాలు, కవితలు మరియు మనసు నుంచి వచ్చిన మాటలు.",
+        en: "Stories, memories, poetry and words that flow from the heart."
       },
-
-      symbol: "≋",
-
-      image: "assets/images/worlds/water.jpg",
 
       link: "pages/writings.html",
 
-      status: "active"
+      image: "assets/images/worlds/writings.jpg"
+    },
+
+
+    {
+      id: "education",
+
+      name: {
+        te: "GI.Education",
+        en: "GI.Education"
+      },
+
+      element: {
+        te: "భూమి",
+        en: "Earth"
+      },
+
+      symbol: "◇",
+
+      description: {
+        te: "జ్ఞానం, నేర్చుకోవడం, టెక్నాలజీ మరియు భవిష్యత్ నైపుణ్యాలు.",
+        en: "Learning, knowledge, technology and future skills."
+      },
+
+      link: "pages/education.html",
+
+      image: "assets/images/worlds/education.jpg"
     },
 
 
     {
       id: "devotional",
 
-      number: "03",
+      name: {
+        te: "GI.Devotional",
+        en: "GI.Devotional"
+      },
 
       element: {
         te: "అగ్ని",
-        en: "FIRE"
-      },
-
-      name: "GI.Devotional",
-
-      title: {
-        te: "భక్తి • సంప్రదాయం",
-        en: "Devotion • Tradition"
-      },
-
-      description: {
-        te:
-          "భక్తి, పండుగలు, దేవతా కథలు, " +
-          "సంప్రదాయాలు మరియు ఆధ్యాత్మిక భావాలు.",
-
-        en:
-          "Devotion, festivals, divine stories, " +
-          "traditions and spiritual expressions."
+        en: "Fire"
       },
 
       symbol: "✦",
 
-      image: "assets/images/worlds/fire.jpg",
+      description: {
+        te: "భక్తి, దేవతా కథలు, పండుగలు, దేవాలయాలు మరియు సంప్రదాయాలు.",
+        en: "Devotion, divine stories, festivals, temples and traditions."
+      },
 
       link: "pages/devotional.html",
 
-      status: "future"
-    },
-
-
-    {
-      id: "media",
-
-      number: "04",
-
-      element: {
-        te: "వాయువు",
-        en: "AIR"
-      },
-
-      name: "GI.Media",
-
-      title: {
-        te: "ఆలోచన • సృజన",
-        en: "Ideas • Creation"
-      },
-
-      description: {
-        te:
-          "AI వీడియోలు, వెబ్ డిజైన్, బ్రాండింగ్, " +
-          "డిజిటల్ మార్కెటింగ్ మరియు సృజనాత్మక సేవలు.",
-
-        en:
-          "AI videos, web design, branding, " +
-          "digital marketing and creative services."
-      },
-
-      symbol: "∿",
-
-      image: "assets/images/worlds/air.jpg",
-
-      link: "pages/media.html",
-
-      status: "active"
+      image: "assets/images/worlds/devotional.jpg"
     },
 
 
     {
       id: "space",
 
-      number: "05",
+      name: {
+        te: "GI.Space",
+        en: "GI.Space"
+      },
 
       element: {
         te: "ఆకాశం",
-        en: "SPACE"
+        en: "Space"
       },
 
-      name: "GI.Space",
-
-      title: {
-        te: "ఆలోచనలు • భవిష్యత్తు",
-        en: "Ideas • Future"
-      },
+      symbol: "∞",
 
       description: {
-        te:
-          "కొత్త ఆలోచనలు, ప్రయోగాలు, AI కాన్సెప్ట్స్ " +
-          "మరియు భవిష్యత్తు ప్రాజెక్టులకు ఒక స్వేచ్ఛా స్థలం.",
-
-        en:
-          "A space for new ideas, experiments, " +
-          "AI concepts and future projects."
+        te: "ఇంకా రూపం దాల్చని ఆలోచనలు, ఊహలు మరియు భవిష్యత్ విజన్స్‌కు అనంతమైన స్థలం.",
+        en: "An infinite space for ideas, imagination and future visions."
       },
-
-      symbol: "✧",
-
-      image: "assets/images/worlds/space.jpg",
 
       link: "pages/space.html",
 
-      status: "future"
+      image: "assets/images/worlds/space.jpg"
     }
 
   ],
 
 
-  /* =======================================================
-     PROJECTS
-     ======================================================= */
+  /* -------------------------------------------------------
+     NAVIGATION
+     ------------------------------------------------------- */
 
-  projects: [
+  navigation: {
 
-    /*
-    Example:
+    home: {
+      te: "హోమ్",
+      en: "Home"
+    },
 
-    {
-      id: "project-01",
+    worlds: {
+      te: "విశ్వం",
+      en: "Worlds"
+    },
 
-      category: "media",
-
-      title: {
-        te: "ప్రాజెక్ట్ పేరు",
-        en: "Project Name"
-      },
-
-      description: {
-        te: "ప్రాజెక్ట్ వివరణ",
-        en: "Project description"
-      },
-
-      image: "assets/images/projects/project-01.jpg",
-
-      link: "#"
+    contact: {
+      te: "సంప్రదించండి",
+      en: "Contact"
     }
-    */
 
-  ],
+  },
 
 
-  /* =======================================================
+  /* -------------------------------------------------------
      CONTACT
-     ======================================================= */
+     ------------------------------------------------------- */
 
   contact: {
 
-    email: "your@email.com",
+    email: "YOUR_EMAIL@example.com",
 
-    whatsapp: "https://wa.me/91XXXXXXXXXX",
+    whatsapp: "",
 
-    social: {
-      instagram: "#",
-      facebook: "#",
-      youtube: "#"
+    phone: "",
+
+    address: {
+      te: "ఇప్పనపాడు • గోదావరి",
+      en: "Ippanapadu • Godavari"
     }
 
   },
 
 
-  /* =======================================================
-     SOCIAL / SEO
-     ======================================================= */
+  /* -------------------------------------------------------
+     SOCIAL MEDIA
+     ------------------------------------------------------- */
 
   social: {
-    instagram: "#",
-    facebook: "#",
-    youtube: "#"
+
+    instagram: "",
+
+    youtube: "",
+
+    facebook: "",
+
+    whatsapp: "",
+
+    website: ""
+
   },
 
 
-  /* =======================================================
+  /* -------------------------------------------------------
      LANGUAGE
-     ======================================================= */
+     ------------------------------------------------------- */
 
-  languages: {
+  language: {
+
     default: "te",
 
     available: [
       "te",
       "en"
     ]
+
   },
 
 
-  /* =======================================================
-     FUTURE WEBSITE SETTINGS
-     ======================================================= */
+  /* -------------------------------------------------------
+     FOOTER
+     ------------------------------------------------------- */
 
-  settings: {
+  footer: {
 
-    showEntryScreen: true,
+    copyright: "GI Creative Space",
 
-    enableLanguageSwitch: true,
-
-    enableProjectFilter: true,
-
-    enableAnimations: true,
-
-    enableFutureSections: true
+    line: {
+      te: "ఆలోచనలకు హద్దులు లేని ప్రపంచం.",
+      en: "A space where ideas have no limits."
+    }
 
   }
 
@@ -368,7 +268,7 @@ const GI_SITE_DATA = {
 
 
 /* =========================================================
-   MAKE DATA AVAILABLE TO OTHER JS FILES
+   GLOBAL ACCESS
    ========================================================= */
 
-window.GI_SITE_DATA = GI_SITE_DATA;
+window.GI_SITE = GI_SITE;
