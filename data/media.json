@@ -1,0 +1,203 @@
+{
+  "section": {
+    "id": "media",
+    "name": "GI.Media",
+
+    "element": {
+      "te": "వాయువు",
+      "en": "AIR"
+    },
+
+    "title": {
+      "te": "ఆలోచనలకు రూపం. రూపానికి ప్రభావం.",
+      "en": "Ideas into Form. Form into Impact."
+    },
+
+    "description": {
+      "te": "AI, డిజైన్, వీడియో, బ్రాండింగ్ మరియు డిజిటల్ ప్రపంచంలో మీ ఆలోచనలను సృజనాత్మకంగా మలిచే స్థలం.",
+      "en": "A creative space where your ideas take shape through AI, design, video, branding and the digital world."
+    },
+
+    "heroImage": "assets/images/media/hero.jpg"
+  },
+
+  "intro": {
+    "te": "మీ ఆలోచన ఎక్కడ మొదలైనా... దానికి ఒక రూపం ఇవ్వడం మా పని.",
+    "en": "Wherever your idea begins, our job is to give it a form."
+  },
+
+  "services": [
+
+    {
+      "id": "ai-creations",
+      "title": {
+        "te": "AI క్రియేషన్స్",
+        "en": "AI Creations"
+      },
+      "description": {
+        "te": "AI ఆధారంగా వీడియోలు, విజువల్స్, కాన్సెప్ట్స్ మరియు కొత్త తరహా డిజిటల్ కంటెంట్.",
+        "en": "AI-powered videos, visuals, concepts and next-generation digital content."
+      },
+      "icon": "✦",
+      "image": "assets/images/media/ai-creations.jpg",
+      "link": "#"
+    },
+
+    {
+      "id": "video",
+      "title": {
+        "te": "వీడియో క్రియేషన్",
+        "en": "Video Creation"
+      },
+      "description": {
+        "te": "బ్రాండ్ కథలు, సోషల్ మీడియా వీడియోలు, ప్రమోషనల్ కంటెంట్ మరియు సినిమాటిక్ విజువల్స్.",
+        "en": "Brand stories, social media videos, promotional content and cinematic visuals."
+      },
+      "icon": "▶",
+      "image": "assets/images/media/video.jpg",
+      "link": "#"
+    },
+
+    {
+      "id": "web-design",
+      "title": {
+        "te": "వెబ్ డిజైన్",
+        "en": "Web Design"
+      },
+      "description": {
+        "te": "మీ బ్రాండ్‌కు ప్రత్యేకమైన, ఆధునిక మరియు మొబైల్ ఫ్రెండ్లీ వెబ్ అనుభవాలు.",
+        "en": "Modern, distinctive and mobile-friendly web experiences for your brand."
+      },
+      "icon": "◇",
+      "image": "assets/images/media/web-design.jpg",
+      "link": "#"
+    },
+
+    {
+      "id": "branding",
+      "title": {
+        "te": "బ్రాండింగ్",
+        "en": "Branding"
+      },
+      "description": {
+        "te": "లోగో నుంచి పూర్తి బ్రాండ్ ఐడెంటిటీ వరకు మీ ఆలోచనకు ఒక ప్రత్యేకమైన గుర్తింపు.",
+        "en": "From logos to complete brand identity, giving your idea a distinctive identity."
+      },
+      "icon": "◈",
+      "image": "assets/images/media/branding.jpg",
+      "link": "#"
+    },
+
+    {
+      "id": "digital-marketing",
+      "title": {
+        "te": "డిజిటల్ మార్కెటింగ్",
+        "en": "Digital Marketing"
+      },
+      "description": {
+        "te": "సోషల్ మీడియా, కంటెంట్ మరియు డిజిటల్ క్యాంపెయిన్ల ద్వారా మీ బ్రాండ్‌ను సరైన ప్రేక్షకుల దగ్గరకు తీసుకెళ్లడం.",
+        "en": "Connecting your brand with the right audience through social media, content and digital campaigns."
+      },
+      "icon": "◎",
+      "image": "assets/images/media/digital-marketing.jpg",
+      "link": "#"
+    },
+
+    {
+      "id": "creative-content",
+      "title": {
+        "te": "క్రియేటివ్ కంటెంట్",
+        "en": "Creative Content"
+      },
+      "description": {
+        "te": "పోస్టర్లు, సోషల్ మీడియా కంటెంట్, క్యాంపెయిన్ ఐడియాలు మరియు ప్రత్యేకమైన క్రియేటివ్ కాన్సెప్ట్స్.",
+        "en": "Posters, social content, campaign ideas and distinctive creative concepts."
+      },
+      "icon": "✧",
+      "image": "assets/images/media/creative-content.jpg",
+      "link": "#"
+    }
+
+  ],
+
+  "process": {
+
+    "title": {
+      "te": "మా పని విధానం",
+      "en": "How We Work"
+    },
+
+    "steps": [
+
+      {
+        "number": "01",
+        "title": {
+          "te": "వింటాం",
+          "en": "Listen"
+        },
+        "description": {
+          "te": "మీ ఆలోచనను ముందుగా అర్థం చేసుకుంటాం.",
+          "en": "We first understand your idea."
+        }
+      },
+
+      {
+        "number": "02",
+        "title": {
+          "te": "ఆలోచిస్తాం",
+          "en": "Imagine"
+        },
+        "description": {
+          "te": "ఆలోచనకు సరైన కాన్సెప్ట్‌ను రూపొందిస్తాం.",
+          "en": "We shape the right concept around it."
+        }
+      },
+
+      {
+        "number": "03",
+        "title": {
+          "te": "సృష్టిస్తాం",
+          "en": "Create"
+        },
+        "description": {
+          "te": "డిజైన్, AI మరియు టెక్నాలజీతో దానికి రూపం ఇస్తాం.",
+          "en": "We bring it to life through design, AI and technology."
+        }
+      },
+
+      {
+        "number": "04",
+        "title": {
+          "te": "ప్రపంచానికి చూపిస్తాం",
+          "en": "Launch"
+        },
+        "description": {
+          "te": "మీ సృష్టిని సరైన ప్రేక్షకుల ముందుకు తీసుకెళ్తాం.",
+          "en": "We take your creation to the right audience."
+        }
+      }
+
+    ]
+  },
+
+  "projects": [],
+
+  "cta": {
+    "title": {
+      "te": "మీ ఆలోచనతో మొదలుపెడదామా?",
+      "en": "Shall We Start With Your Idea?"
+    },
+
+    "description": {
+      "te": "మీ ఆలోచనను మాతో పంచుకోండి. దానికి కలిసి ఒక రూపం ఇద్దాం.",
+      "en": "Share your idea with us. Let's give it a form together."
+    },
+
+    "button": {
+      "te": "మాట్లాడుదాం →",
+      "en": "Let's Talk →"
+    },
+
+    "link": "https://wa.me/91XXXXXXXXXX"
+  }
+}
