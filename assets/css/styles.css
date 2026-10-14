@@ -1,0 +1,1612 @@
+/* =========================================================
+   GI CREATIVE SPACE
+   MAIN WEBSITE STYLES
+   Godavari Roots. Ippanapadu Soul.
+   ========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+  --bg-deep: #050b10;
+  --bg-dark: #08151d;
+  --bg-soft: #0d2029;
+
+  --text-main: #f4f2ea;
+  --text-soft: #b8c4c7;
+  --text-muted: #718287;
+
+  --godavari: #3aa7b7;
+  --godavari-light: #78d6df;
+
+  --green: #7cae7b;
+  --gold: #d6b56a;
+  --fire: #d9824b;
+
+  --border: rgba(255, 255, 255, 0.12);
+  --glass: rgba(255, 255, 255, 0.055);
+
+  --max-width: 1280px;
+
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 10px;
+
+  --transition:
+    0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   02. RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(58, 167, 183, 0.08),
+      transparent 35%
+    ),
+    var(--bg-deep);
+
+  color: var(--text-main);
+
+  font-family:
+    "Noto Sans Telugu",
+    "Noto Sans",
+    Arial,
+    sans-serif;
+
+  line-height: 1.7;
+
+  overflow-x: hidden;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================================
+   03. GLOBAL CONTAINER
+   ========================================================= */
+
+.section-container {
+  width: min(
+    calc(100% - 48px),
+    var(--max-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   04. ENTRY / WELCOME SCREEN
+   ========================================================= */
+
+.entry-screen {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(58, 167, 183, 0.18),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(214, 181, 106, 0.05),
+      transparent 45%
+    ),
+    #02070b;
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease;
+}
+
+.entry-screen::before {
+  content: "";
+
+  position: absolute;
+  inset: -20%;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.75) 1px,
+      transparent 1.5px
+    );
+
+  background-size: 90px 90px;
+
+  opacity: 0.16;
+
+  animation:
+    stars-drift 35s linear infinite;
+}
+
+.entry-screen::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(120, 214, 223, 0.08);
+
+  box-shadow:
+    0 0 100px rgba(58, 167, 183, 0.08);
+
+  animation: orbit-pulse 7s ease-in-out infinite;
+}
+
+.entry-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.entry-content {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  padding: 30px;
+}
+
+.entry-logo {
+  width: 110px;
+  height: 110px;
+
+  margin: 0 auto 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(214, 181, 106, 0.35);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(58, 167, 183, 0.18),
+      rgba(0,0,0,0.35)
+    );
+
+  box-shadow:
+    0 0 60px rgba(58, 167, 183, 0.15),
+    inset 0 0 30px rgba(255,255,255,0.04);
+}
+
+.entry-logo span {
+  font-family: Georgia, serif;
+
+  font-size: 2.2rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  color: var(--text-main);
+}
+
+.entry-label {
+  margin-bottom: 14px;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.45em;
+
+  color: var(--gold);
+}
+
+.entry-content h1 {
+  font-family:
+    "Noto Serif Telugu",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2rem, 5vw, 4.5rem);
+
+  line-height: 1.35;
+
+  font-weight: 400;
+
+  margin-bottom: 20px;
+}
+
+.entry-tagline {
+  color: var(--text-soft);
+
+  font-family: Georgia, serif;
+
+  font-size: 0.95rem;
+
+  letter-spacing: 0.08em;
+
+  margin-bottom: 38px;
+}
+
+.enter-button {
+  position: relative;
+
+  padding: 14px 28px;
+
+  border: 1px solid rgba(214, 181, 106, 0.5);
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.03);
+
+  color: var(--text-main);
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.enter-button:hover {
+  background: rgba(214, 181, 106, 0.12);
+
+  border-color: var(--gold);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 35px rgba(214, 181, 106, 0.12);
+}
+
+
+/* =========================================================
+   05. HEADER
+   ========================================================= */
+
+.site-header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(3, 9, 13, 0.92),
+      rgba(3, 9, 13, 0.55),
+      transparent
+    );
+
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  width: min(
+    calc(100% - 48px),
+    var(--max-width)
+  );
+
+  min-height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+/* BRAND */
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-right: auto;
+}
+
+.brand-mark {
+  display: grid;
+
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid rgba(214, 181, 106, 0.35);
+
+  border-radius: 50%;
+
+  font-family: Georgia, serif;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+.brand-name {
+  font-family: Georgia, serif;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.08em;
+
+  color: var(--text-soft);
+}
+
+
+/* NAVIGATION */
+
+.main-nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+.main-nav a,
+.nav-worlds-button {
+  border: 0;
+
+  background: none;
+
+  color: var(--text-soft);
+
+  cursor: pointer;
+
+  font-size: 0.88rem;
+
+  transition: var(--transition);
+}
+
+.main-nav a:hover,
+.nav-worlds-button:hover {
+  color: var(--text-main);
+}
+
+
+/* LANGUAGE */
+
+.language-switch {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding-left: 15px;
+
+  border-left: 1px solid var(--border);
+
+  color: var(--text-muted);
+
+  font-size: 0.72rem;
+}
+
+.language-button {
+  border: 0;
+
+  background: none;
+
+  color: var(--text-muted);
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.language-button.active,
+.language-button:hover {
+  color: var(--text-main);
+}
+
+
+/* MOBILE BUTTON */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 50%;
+
+  background: var(--glass);
+
+  cursor: pointer;
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 17px;
+  height: 1px;
+
+  margin: 4px auto;
+
+  background: var(--text-main);
+}
+
+
+/* =========================================================
+   06. WORLDS MENU
+   ========================================================= */
+
+.worlds-menu {
+  position: absolute;
+
+  top: 82px;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(-15px);
+
+  transition: var(--transition);
+
+  background:
+    rgba(4, 12, 17, 0.96);
+
+  border-top: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
+
+  backdrop-filter: blur(25px);
+}
+
+.worlds-menu.open {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.worlds-menu-inner {
+  width: min(
+    calc(100% - 48px),
+    var(--max-width)
+  );
+
+  margin: 0 auto;
+
+  padding: 45px 0;
+}
+
+.worlds-intro {
+  margin-bottom: 30px;
+}
+
+.worlds-intro span,
+.section-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--gold);
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.3em;
+
+  text-transform: uppercase;
+}
+
+.worlds-intro h2 {
+  font-family:
+    "Noto Serif Telugu",
+    Georgia,
+    serif;
+
+  font-size: 2rem;
+
+  font-weight: 400;
+}
+
+.worlds-intro p {
+  color: var(--text-muted);
+
+  margin-top: 8px;
+}
+
+.worlds-mini-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 12px;
+}
+
+.world-mini {
+  min-height: 180px;
+
+  padding: 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.015)
+    );
+
+  transition: var(--transition);
+}
+
+.world-mini:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(255,255,255,0.22);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.025)
+    );
+}
+
+.world-symbol {
+  margin-bottom: auto;
+
+  font-size: 1.7rem;
+}
+
+.world-element {
+  color: var(--text-muted);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.2em;
+}
+
+.world-mini strong {
+  margin-top: 5px;
+
+  font-family: Georgia, serif;
+
+  font-size: 1rem;
+}
+
+.world-mini small {
+  color: var(--text-muted);
+
+  font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   07. HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      115deg,
+      #061017 0%,
+      #08242b 48%,
+      #071016 100%
+    );
+}
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 70% 60%,
+      rgba(58,167,183,0.20),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 20% 80%,
+      rgba(124,174,123,0.12),
+      transparent 30%
+    );
+
+  transform: scale(1.05);
+
+  animation: hero-breathe 12s ease-in-out infinite;
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,10,14,0.94) 0%,
+      rgba(3,10,14,0.72) 40%,
+      rgba(3,10,14,0.15) 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    calc(100% - 48px),
+    var(--max-width)
+  );
+
+  margin: 0 auto;
+
+  padding-top: 80px;
+}
+
+.hero-overline {
+  margin-bottom: 18px;
+
+  color: var(--gold);
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.4em;
+}
+
+.hero h1 {
+  max-width: 850px;
+
+  font-family:
+    "Noto Serif Telugu",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2.7rem, 6vw, 6.5rem);
+
+  line-height: 1.2;
+
+  font-weight: 400;
+}
+
+.hero-tagline {
+  margin-top: 25px;
+
+  color: var(--godavari-light);
+
+  font-family: Georgia, serif;
+
+  font-size: 1rem;
+
+  letter-spacing: 0.08em;
+}
+
+.hero-description {
+  max-width: 650px;
+
+  margin-top: 18px;
+
+  color: var(--text-soft);
+
+  font-size: 1rem;
+}
+
+.primary-button {
+  display: inline-flex;
+
+  margin-top: 35px;
+
+  padding: 13px 24px;
+
+  border: 1px solid rgba(120,214,223,0.35);
+
+  border-radius: 999px;
+
+  background: rgba(58,167,183,0.08);
+
+  transition: var(--transition);
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  background: rgba(58,167,183,0.16);
+
+  border-color: var(--godavari-light);
+}
+
+.hero-scroll {
+  position: absolute;
+
+  z-index: 3;
+
+  right: 35px;
+
+  bottom: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--text-muted);
+
+  font-size: 0.6rem;
+
+  letter-spacing: 0.3em;
+
+  writing-mode: vertical-rl;
+}
+
+.hero-scroll i {
+  width: 1px;
+  height: 55px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--godavari-light)
+  );
+}
+
+
+/* =========================================================
+   08. PHILOSOPHY
+   ========================================================= */
+
+.philosophy-section {
+  padding: 150px 0;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(58,167,183,0.08),
+      transparent 35%
+    );
+}
+
+.philosophy-section .section-container {
+  max-width: 850px;
+}
+
+.philosophy-section h2,
+.section-heading h2 {
+  font-family:
+    "Noto Serif Telugu",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2rem, 4vw, 4rem);
+
+  line-height: 1.35;
+
+  font-weight: 400;
+}
+
+.section-description {
+  max-width: 680px;
+
+  margin: 25px auto 0;
+
+  color: var(--text-soft);
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   09. WORLDS SECTION
+   ========================================================= */
+
+.worlds-section {
+  padding: 120px 0;
+}
+
+.section-heading {
+  max-width: 760px;
+
+  margin-bottom: 55px;
+}
+
+.section-heading > p:last-child {
+  margin-top: 15px;
+
+  color: var(--text-soft);
+}
+
+
+/* WORLD GRID */
+
+.world-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(12, 1fr);
+
+  gap: 18px;
+}
+
+
+/* WORLD CARD */
+
+.world-card {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 500px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.055),
+      rgba(255,255,255,0.015)
+    );
+
+  transition: var(--transition);
+}
+
+.world-card:nth-child(1),
+.world-card:nth-child(2) {
+  grid-column: span 6;
+}
+
+.world-card:nth-child(3),
+.world-card:nth-child(4),
+.world-card:nth-child(5) {
+  grid-column: span 4;
+}
+
+.world-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(255,255,255,0.2);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.25);
+}
+
+.world-card-visual {
+  position: relative;
+
+  min-height: 300px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.08),
+      transparent 50%
+    );
+}
+
+.world-card-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,0.09);
+
+  box-shadow:
+    0 0 70px rgba(255,255,255,0.04);
+
+  animation:
+    orbit-pulse 8s ease-in-out infinite;
+}
+
+.element-number {
+  position: absolute;
+
+  top: 20px;
+  left: 22px;
+
+  color: var(--text-muted);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.2em;
+}
+
+.element-symbol {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 4rem;
+
+  color: var(--text-main);
+
+  opacity: 0.85;
+}
+
+.world-card-content {
+  padding: 30px;
+}
+
+.element-name {
+  color: var(--text-muted);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.world-card h3 {
+  margin-top: 7px;
+
+  font-family: Georgia, serif;
+
+  font-size: 1.6rem;
+
+  font-weight: 500;
+}
+
+.world-card p {
+  margin-top: 10px;
+
+  color: var(--text-soft);
+}
+
+.world-card a {
+  display: inline-block;
+
+  margin-top: 22px;
+
+  color: var(--godavari-light);
+
+  font-size: 0.82rem;
+
+  transition: var(--transition);
+}
+
+.world-card a:hover {
+  transform: translateX(5px);
+}
+
+
+/* ELEMENT ATMOSPHERES */
+
+.world-card.earth .world-card-visual {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(124,174,123,0.18),
+      transparent 55%
+    );
+}
+
+.world-card.water .world-card-visual {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(58,167,183,0.2),
+      transparent 55%
+    );
+}
+
+.world-card.fire .world-card-visual {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(217,130,75,0.18),
+      transparent 55%
+    );
+}
+
+.world-card.air .world-card-visual {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(150,190,200,0.14),
+      transparent 55%
+    );
+}
+
+.world-card.cosmic .world-card-visual {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(110,100,190,0.20),
+      transparent 55%
+    );
+}
+
+
+/* =========================================================
+   10. PROJECTS
+   ========================================================= */
+
+.projects-section {
+  padding: 120px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(255,255,255,0.018)
+    );
+}
+
+.project-filters {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 35px;
+}
+
+.filter-button {
+  padding: 9px 16px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: var(--text-muted);
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.filter-button:hover,
+.filter-button.active {
+  color: var(--text-main);
+
+  border-color: rgba(120,214,223,0.4);
+
+  background: rgba(58,167,183,0.08);
+}
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   11. CONTACT
+   ========================================================= */
+
+.contact-section {
+  padding: 150px 0;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(58,167,183,0.09),
+      transparent 40%
+    );
+}
+
+.contact-section h2 {
+  margin-top: 8px;
+
+  font-family:
+    "Noto Serif Telugu",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2.4rem, 5vw, 5rem);
+
+  font-weight: 400;
+}
+
+.contact-section p:not(.section-label) {
+  margin-top: 12px;
+
+  color: var(--text-soft);
+}
+
+.contact-actions {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 35px;
+}
+
+.contact-button {
+  padding: 12px 22px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 999px;
+
+  transition: var(--transition);
+}
+
+.contact-button:hover {
+  border-color: var(--godavari-light);
+
+  background: rgba(58,167,183,0.08);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   12. FOOTER
+   ========================================================= */
+
+.site-footer {
+  padding: 50px 0 25px;
+
+  border-top: 1px solid var(--border);
+
+  background: #03080c;
+}
+
+.footer-inner {
+  width: min(
+    calc(100% - 48px),
+    var(--max-width)
+  );
+
+  margin: 0 auto;
+}
+
+.footer-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.footer-logo {
+  display: grid;
+
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 50%;
+
+  font-family: Georgia, serif;
+}
+
+.footer-brand strong {
+  font-family: Georgia, serif;
+}
+
+.footer-brand p {
+  margin-top: 2px;
+
+  color: var(--text-muted);
+
+  font-size: 0.72rem;
+}
+
+.footer-links {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  margin-top: 35px;
+
+  color: var(--text-muted);
+
+  font-size: 0.82rem;
+}
+
+.footer-links a:hover {
+  color: var(--text-main);
+}
+
+.footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-top: 50px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--text-muted);
+
+  font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   13. HIDDEN STATE
+   ========================================================= */
+
+.hidden {
+  display: none;
+}
+
+
+/* =========================================================
+   14. ANIMATIONS
+   ========================================================= */
+
+@keyframes stars-drift {
+
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-90px, 70px, 0);
+  }
+
+}
+
+@keyframes orbit-pulse {
+
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+}
+
+@keyframes hero-breathe {
+
+  0%,
+  100% {
+    transform: scale(1.03);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+}
+
+
+/* =========================================================
+   15. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .worlds-mini-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .world-card:nth-child(1),
+  .world-card:nth-child(2) {
+    grid-column: span 6;
+  }
+
+  .world-card:nth-child(3),
+  .world-card:nth-child(4),
+  .world-card:nth-child(5) {
+    grid-column: span 4;
+  }
+
+  .projects-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   16. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .section-container,
+  .header-inner,
+  .hero-content,
+  .footer-inner,
+  .worlds-menu-inner {
+    width: min(
+      calc(100% - 30px),
+      var(--max-width)
+    );
+  }
+
+
+  /* HEADER */
+
+  .main-nav {
+    position: absolute;
+
+    top: 75px;
+    left: 15px;
+    right: 15px;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 20px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: rgba(4,12,17,0.96);
+
+    backdrop-filter: blur(20px);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a,
+  .nav-worlds-button {
+    padding: 10px;
+  }
+
+  .language-switch {
+    margin-left: auto;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .brand-name {
+    display: none;
+  }
+
+
+  /* WORLDS MENU */
+
+  .worlds-menu {
+    top: 72px;
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+  }
+
+  .worlds-mini-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    padding-top: 80px;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(2.3rem, 11vw, 4rem);
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+
+  /* SECTIONS */
+
+  .philosophy-section,
+  .worlds-section,
+  .projects-section,
+  .contact-section {
+    padding: 90px 0;
+  }
+
+
+  /* WORLD CARDS */
+
+  .world-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .world-card:nth-child(1),
+  .world-card:nth-child(2),
+  .world-card:nth-child(3),
+  .world-card:nth-child(4),
+  .world-card:nth-child(5) {
+    grid-column: span 1;
+  }
+
+  .world-card {
+    min-height: 430px;
+  }
+
+  .world-card-visual {
+    min-height: 240px;
+  }
+
+
+  /* PROJECTS */
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* FOOTER */
+
+  .footer-bottom {
+    flex-direction: column;
+
+    margin-top: 35px;
+  }
+
+}
+
+
+/* =========================================================
+   17. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .worlds-mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .entry-content h1 {
+    font-size: 2rem;
+  }
+
+  .entry-tagline {
+    font-size: 0.8rem;
+  }
+
+  .world-card-content {
+    padding: 24px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+}
