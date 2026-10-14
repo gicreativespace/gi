@@ -1,0 +1,163 @@
+{
+  "section": {
+    "id": "devotional",
+    "name": "GI.Devotional",
+
+    "element": {
+      "te": "అగ్ని",
+      "en": "FIRE"
+    },
+
+    "title": {
+      "te": "భక్తి వెలుగులు వెలిగే చోటు.",
+      "en": "Where Devotion Becomes Light."
+    },
+
+    "description": {
+      "te": "భక్తి, దేవాలయాలు, పండుగలు, దేవతా కథలు, సంప్రదాయాలు మరియు మన సంస్కృతిని సృజనాత్మకంగా పరిచయం చేసే ప్రపంచం.",
+      "en": "A creative world exploring devotion, temples, festivals, divine stories, traditions and our cultural heritage."
+    },
+
+    "heroImage": "assets/images/devotional/hero.jpg"
+  },
+
+  "intro": {
+    "te": "భక్తి అంటే కేవలం ప్రార్థన కాదు... మనసుతో అనుభవించే ఒక వెలుగు.",
+    "en": "Devotion is more than prayer... it is a light experienced by the heart."
+  },
+
+  "categories": [
+    {
+      "id": "devi-stories",
+
+      "title": {
+        "te": "అమ్మవారి కథలు",
+        "en": "Stories of the Divine Mother"
+      },
+
+      "description": {
+        "te": "అమ్మవారి రూపాలు, కథలు, అలంకారాలు మరియు వాటి వెనుక ఉన్న భావం.",
+        "en": "Stories, forms, adornments and meanings behind the Divine Mother."
+      },
+
+      "icon": "✦",
+
+      "image": "assets/images/devotional/devi-stories.jpg"
+    },
+
+    {
+      "id": "festivals",
+
+      "title": {
+        "te": "పండుగలు",
+        "en": "Festivals"
+      },
+
+      "description": {
+        "te": "మన పండుగల వెనుక ఉన్న కథ, సంప్రదాయం మరియు ఆధ్యాత్మిక భావం.",
+        "en": "The stories, traditions and spiritual meaning behind our festivals."
+      },
+
+      "icon": "✧",
+
+      "image": "assets/images/devotional/festivals.jpg"
+    },
+
+    {
+      "id": "temples",
+
+      "title": {
+        "te": "దేవాలయాలు",
+        "en": "Temples"
+      },
+
+      "description": {
+        "te": "మన దేవాలయాల చరిత్ర, విశిష్టత, కథలు మరియు భక్తి అనుభూతులు.",
+        "en": "The history, significance, stories and devotional experiences of our temples."
+      },
+
+      "icon": "◇",
+
+      "image": "assets/images/devotional/temples.jpg"
+    },
+
+    {
+      "id": "traditions",
+
+      "title": {
+        "te": "సంప్రదాయాలు",
+        "en": "Traditions"
+      },
+
+      "description": {
+        "te": "తరతరాలుగా మనతో వచ్చిన ఆచారాలు, సంప్రదాయాలు మరియు సంస్కృతి.",
+        "en": "Customs, traditions and cultural practices passed down through generations."
+      },
+
+      "icon": "◉",
+
+      "image": "assets/images/devotional/traditions.jpg"
+    }
+  ],
+
+  "series": [
+    {
+      "id": "navaratri",
+
+      "title": {
+        "te": "శరన్నవరాత్రుల ప్రత్యేక కథామాలిక",
+        "en": "Special Sharannavaratri Stories"
+      },
+
+      "description": {
+        "te": "తొమ్మిది రోజులు • తొమ్మిది అమ్మవారి అలంకారాలు • తొమ్మిది భావాలు.",
+        "en": "Nine days • Nine divine forms • Nine expressions of devotion."
+      },
+
+      "image": "assets/images/devotional/navaratri.jpg",
+
+      "totalParts": 9,
+
+      "link": "#"
+    }
+  ],
+
+  "posts": [],
+
+  "videos": [],
+
+  "featured": {
+    "title": {
+      "te": "ఈ రోజు ఒక దైవిక కథ",
+      "en": "A Divine Story for Today"
+    },
+
+    "description": {
+      "te": "మన సంప్రదాయంలో ఉన్న ఒక కథను, దాని వెనుక ఉన్న భావంతో కలిసి తెలుసుకుందాం.",
+      "en": "Discover a story from our tradition along with the meaning behind it."
+    },
+
+    "image": "assets/images/devotional/featured.jpg",
+
+    "link": "#"
+  },
+
+  "cta": {
+    "title": {
+      "te": "భక్తి ప్రయాణంలో కలిసి నడుద్దాం.",
+      "en": "Let us walk together on a journey of devotion."
+    },
+
+    "description": {
+      "te": "మన కథలు, మన సంప్రదాయాలు, మన సంస్కృతిని కొత్త తరానికి కొత్త రూపంలో పరిచయం చేద్దాం.",
+      "en": "Let us introduce our stories, traditions and culture to a new generation in a new form."
+    },
+
+    "button": {
+      "te": "దైవిక ప్రపంచంలోకి →",
+      "en": "Enter the Divine World →"
+    },
+
+    "link": "#series"
+  }
+}
