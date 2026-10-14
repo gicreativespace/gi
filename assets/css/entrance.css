@@ -1,0 +1,582 @@
+/* =========================================================
+   GI CREATIVE SPACE
+   ENTRANCE PAGE
+   ========================================================= */
+
+.entrance-page {
+  margin: 0;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #020706;
+}
+
+
+.entrance {
+  position: relative;
+
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(44, 104, 105, .16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(130, 105, 55, .09),
+      transparent 30%
+    ),
+    #020706;
+}
+
+
+/* =========================================================
+   SPACE
+   ========================================================= */
+
+.entrance-space {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 0,
+      rgba(0,0,0,.18) 45%,
+      rgba(0,0,0,.72) 100%
+    );
+}
+
+
+.entrance-stars {
+  position: absolute;
+  inset: 0;
+
+  opacity: .5;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.65) 1px,
+      transparent 1.5px
+    );
+
+  background-size:
+    190px 170px;
+
+  animation:
+    entranceStars 30s linear infinite;
+}
+
+
+@keyframes entranceStars {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(35px);
+  }
+
+}
+
+
+/* =========================================================
+   GLOW
+   ========================================================= */
+
+.entrance-glow {
+  position: absolute;
+
+  width: 45vw;
+  height: 45vw;
+
+  max-width: 650px;
+  max-height: 650px;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+.entrance-glow-one {
+  background: rgba(45, 128, 130, .09);
+
+  left: -12%;
+  top: 15%;
+
+  animation:
+    entranceGlowOne 10s ease-in-out infinite alternate;
+}
+
+
+.entrance-glow-two {
+  background: rgba(205, 169, 91, .07);
+
+  right: -12%;
+  bottom: 5%;
+
+  animation:
+    entranceGlowTwo 12s ease-in-out infinite alternate;
+}
+
+
+@keyframes entranceGlowOne {
+
+  from {
+    transform: scale(.85);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+
+}
+
+
+@keyframes entranceGlowTwo {
+
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(.78);
+  }
+
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.entrance-content {
+
+  position: relative;
+  z-index: 5;
+
+  width:
+    min(
+      calc(100% - 40px),
+      800px
+    );
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation:
+    entranceContent 1.4s ease both;
+}
+
+
+@keyframes entranceContent {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   GI LOGO
+   ========================================================= */
+
+.entrance-logo {
+
+  width: 92px;
+  height: 92px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid
+    rgba(214, 180, 105, .5);
+
+  border-radius: 50%;
+
+  color:
+    #e3c47d;
+
+  font-size:
+    32px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    .12em;
+
+  box-shadow:
+    0 0 80px
+    rgba(214,180,105,.08);
+
+  margin-bottom:
+    28px;
+}
+
+
+.entrance-line {
+
+  width:
+    45px;
+
+  height:
+    1px;
+
+  margin-bottom:
+    20px;
+
+  background:
+    rgba(214,180,105,.55);
+}
+
+
+.entrance-kicker {
+
+  color:
+    rgba(255,255,255,.48);
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    .42em;
+
+  margin-left:
+    .42em;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.entrance h1 {
+
+  margin:
+    24px 0 18px;
+
+  color:
+    #f2eee4;
+
+  font-family:
+    Georgia,
+    "Noto Serif Telugu",
+    serif;
+
+  font-weight:
+    400;
+
+  font-size:
+    clamp(
+      48px,
+      7vw,
+      92px
+    );
+
+  line-height:
+    1.12;
+
+  letter-spacing:
+    -.035em;
+
+  text-shadow:
+    0 15px 50px
+    rgba(0,0,0,.5);
+}
+
+
+.entrance-tagline {
+
+  margin:
+    0;
+
+  color:
+    #d9bc78;
+
+  font-family:
+    Georgia,
+    "Noto Serif Telugu",
+    serif;
+
+  font-size:
+    clamp(
+      18px,
+      2.2vw,
+      27px
+    );
+
+  line-height:
+    1.6;
+}
+
+
+.entrance-description {
+
+  max-width:
+    470px;
+
+  margin:
+    14px 0 32px;
+
+  color:
+    rgba(245,241,232,.55);
+
+  font-size:
+    14px;
+
+  line-height:
+    1.9;
+}
+
+
+/* =========================================================
+   ENTER BUTTON
+   ========================================================= */
+
+.entrance-button {
+
+  min-width:
+    240px;
+
+  padding:
+    15px 23px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    22px;
+
+  border:
+    1px solid
+    rgba(214,180,105,.42);
+
+  border-radius:
+    999px;
+
+  color:
+    #eee8db;
+
+  text-decoration:
+    none;
+
+  background:
+    rgba(255,255,255,.025);
+
+  backdrop-filter:
+    blur(12px);
+
+  transition:
+    .35s ease;
+}
+
+
+.entrance-button:hover {
+
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(214,180,105,.85);
+
+  background:
+    rgba(214,180,105,.08);
+
+  box-shadow:
+    0 15px 45px
+    rgba(0,0,0,.35);
+}
+
+
+.entrance-arrow {
+
+  color:
+    #d9bc78;
+
+  font-size:
+    20px;
+
+  transition:
+    transform .35s ease;
+}
+
+
+.entrance-button:hover
+.entrance-arrow {
+
+  transform:
+    translateX(5px);
+}
+
+
+/* =========================================================
+   BOTTOM IDENTITY
+   ========================================================= */
+
+.entrance-bottom {
+
+  position:
+    absolute;
+
+  z-index:
+    5;
+
+  left:
+    50%;
+
+  bottom:
+    26px;
+
+  transform:
+    translateX(-50%);
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  white-space:
+    nowrap;
+
+  color:
+    rgba(255,255,255,.27);
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    .28em;
+}
+
+
+.entrance-bottom i {
+
+  width:
+    3px;
+
+  height:
+    3px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(214,180,105,.55);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .entrance-logo {
+
+    width:
+      76px;
+
+    height:
+      76px;
+
+    font-size:
+      27px;
+  }
+
+
+  .entrance h1 {
+
+    font-size:
+      48px;
+
+    max-width:
+      340px;
+  }
+
+
+  .entrance-description {
+
+    font-size:
+      13px;
+
+    max-width:
+      320px;
+  }
+
+
+  .entrance-button {
+
+    min-width:
+      220px;
+
+    padding:
+      14px 18px;
+  }
+
+
+  .entrance-bottom {
+
+    gap:
+      7px;
+
+    font-size:
+      6px;
+
+    letter-spacing:
+      .18em;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .entrance-stars,
+  .entrance-glow,
+  .entrance-content {
+
+    animation:
+      none;
+  }
+
+}
