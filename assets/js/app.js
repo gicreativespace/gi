@@ -1,78 +1,59 @@
 /* =========================================================
    GI CREATIVE SPACE
-   MAIN APPLICATION
+   GLOBAL APPLICATION SCRIPT
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const data = window.GI_SITE_DATA;
+  /* -------------------------------------------------------
+     SITE DATA
+     ------------------------------------------------------- */
 
-  if (!data) {
-    console.error("GI_SITE_DATA not found.");
-    return;
-  }
-
-
-  /* =======================================================
-     ELEMENTS
-     ======================================================= */
-
-  const entryScreen = document.getElementById("entry-screen");
-  const enterButton = document.getElementById("enter-space");
-  const site = document.getElementById("site");
-
-  const worldsButton = document.getElementById("worlds-button");
-  const worldsMenu = document.getElementById("worlds-menu");
-
-  const mobileMenuButton =
-    document.getElementById("mobile-menu-button");
-
-  const mainNavigation =
-    document.getElementById("main-navigation");
-
-  const languageButtons =
-    document.querySelectorAll(".language-button");
-
-  const projectsGrid =
-    document.getElementById("projects-grid");
-
-  const projectFilters =
-    document.querySelectorAll(".filter-button");
-
-  const currentYear =
-    document.getElementById("current-year");
+  const site =
+    window.GI_SITE || {};
 
 
-  /* =======================================================
+
+  /* -------------------------------------------------------
      LANGUAGE
-     ======================================================= */
+     ------------------------------------------------------- */
 
   let currentLanguage =
     localStorage.getItem("gi-language") ||
-    data.languages.default ||
+    site.language?.default ||
     "te";
 
 
-  function getText(value) {
+  function setLanguage(language) {
 
-    if (!value) {
-      return "";
+    if (!["te", "en"].includes(language)) {
+      language = "te";
     }
 
-    if (typeof value === "string") {
-      return value;
-    }
+    currentLanguage = language;
 
-    return value[currentLanguage] ||
-           value.te ||
-           value.en ||
-           "";
+    localStorage.setItem(
+      "gi-language",
+      language
+    );
+
+    updateLanguageButtons();
+
+    updateStaticLanguage();
+
   }
+
 
 
   function updateLanguageButtons() {
 
-    languageButtons.forEach(button => {
+    const buttons =
+      document.querySelectorAll(
+        ".language-button"
+      );
+
+
+    buttons.forEach(button => {
 
       const language =
         button.dataset.language;
@@ -87,155 +68,93 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  function updateStaticText() {
+
+  function updateStaticLanguage() {
 
     /*
-      The current index.html contains important
-      Telugu/English text directly.
+     * Elements can use:
+     *
+     * data-te="తెలుగు"
+     * data-en="English"
+     *
+     * This makes future translations
+     * very easy.
+     */
 
-      Future sections can use data attributes
-      such as:
+    const translatedElements =
+      document.querySelectorAll(
+        "[data-te][data-en]"
+      );
 
-      data-i18n="brand.tagline"
 
-      and this function can automatically
-      translate them.
-    */
-
-    const elements =
-      document.querySelectorAll("[data-i18n]");
-
-    elements.forEach(element => {
-
-      const key =
-        element.dataset.i18n;
+    translatedElements.forEach(element => {
 
       const value =
-        getNestedValue(data, key);
+        element.dataset[currentLanguage];
 
-      if (value) {
-        element.textContent =
-          getText(value);
+      if (value !== undefined) {
+        element.textContent = value;
       }
 
     });
 
-    updateLanguageButtons();
+
+    /*
+     * Update document language
+     */
 
     document.documentElement.lang =
       currentLanguage === "te"
         ? "te"
         : "en";
-  }
-
-
-  function getNestedValue(object, path) {
-
-    return path
-      .split(".")
-      .reduce(
-        (current, key) =>
-          current ? current[key] : undefined,
-        object
-      );
 
   }
 
 
-  languageButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+  document
+    .querySelectorAll(
+      ".language-button"
+    )
+    .forEach(button => {
 
-      const selectedLanguage =
-        button.dataset.language;
+      button.addEventListener(
+        "click",
+        () => {
 
-      if (!selectedLanguage) {
-        return;
-      }
+          setLanguage(
+            button.dataset.language
+          );
 
-      currentLanguage =
-        selectedLanguage;
-
-      localStorage.setItem(
-        "gi-language",
-        currentLanguage
+        }
       );
-
-      updateStaticText();
-
-      /*
-        Future dynamic sections
-        can be refreshed here.
-      */
-
-      renderProjects("all");
 
     });
 
-  });
 
 
-  /* =======================================================
-     ENTRY EXPERIENCE
-     ======================================================= */
-
-  function enterCreativeSpace() {
-
-    if (!entryScreen || !site) {
-      return;
-    }
-
-    entryScreen.classList.add("hide");
-
-    document.body.classList.remove("no-scroll");
-
-    setTimeout(() => {
-
-      entryScreen.style.display =
-        "none";
-
-      site.classList.remove("hidden");
-
-      window.scrollTo({
-        top: 0,
-        behavior: "instant"
-      });
-
-    }, 1000);
-
-  }
-
-
-  if (data.settings.showEntryScreen === false) {
-
-    if (entryScreen) {
-      entryScreen.style.display =
-        "none";
-    }
-
-    if (site) {
-      site.classList.remove("hidden");
-    }
-
-  } else {
-
-    document.body.classList.add("no-scroll");
-
-    if (enterButton) {
-
-      enterButton.addEventListener(
-        "click",
-        enterCreativeSpace
-      );
-
-    }
-
-  }
-
-
-  /* =======================================================
+  /* -------------------------------------------------------
      WORLDS MENU
-     ======================================================= */
+     ------------------------------------------------------- */
+
+  const worldsButton =
+    document.getElementById(
+      "worlds-button"
+    );
+
+
+  const worldsMenu =
+    document.getElementById(
+      "worlds-menu"
+    );
+
+
+  const worldsGrid =
+    document.getElementById(
+      "worlds-mini-grid"
+    );
+
+
 
   function openWorldsMenu() {
 
@@ -243,12 +162,15 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    worldsMenu.classList.add("open");
+    worldsMenu.classList.add(
+      "is-open"
+    );
 
     worldsMenu.setAttribute(
       "aria-hidden",
       "false"
     );
+
 
     if (worldsButton) {
 
@@ -262,18 +184,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+
   function closeWorldsMenu() {
 
     if (!worldsMenu) {
       return;
     }
 
-    worldsMenu.classList.remove("open");
+    worldsMenu.classList.remove(
+      "is-open"
+    );
 
     worldsMenu.setAttribute(
       "aria-hidden",
       "true"
     );
+
 
     if (worldsButton) {
 
@@ -287,6 +213,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+
+  function toggleWorldsMenu() {
+
+    if (!worldsMenu) {
+      return;
+    }
+
+    const isOpen =
+      worldsMenu.classList.contains(
+        "is-open"
+      );
+
+
+    if (isOpen) {
+
+      closeWorldsMenu();
+
+    } else {
+
+      openWorldsMenu();
+
+    }
+
+  }
+
+
+
   if (worldsButton) {
 
     worldsButton.addEventListener(
@@ -295,14 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         event.stopPropagation();
 
-        const isOpen =
-          worldsMenu.classList.contains("open");
-
-        if (isOpen) {
-          closeWorldsMenu();
-        } else {
-          openWorldsMenu();
-        }
+        toggleWorldsMenu();
 
       }
     );
@@ -310,15 +256,152 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+
+  /* -------------------------------------------------------
+     BUILD FIVE WORLDS MENU
+     ------------------------------------------------------- */
+
+  function buildWorldsMenu() {
+
+    if (!worldsGrid) {
+      return;
+    }
+
+
+    if (
+      !site.worlds ||
+      !Array.isArray(site.worlds)
+    ) {
+
+      return;
+
+    }
+
+
+    worldsGrid.innerHTML =
+      site.worlds
+        .map(world => {
+
+          const name =
+            world.name?.[currentLanguage] ||
+            world.name?.te ||
+            world.name?.en ||
+            world.id;
+
+
+          const element =
+            world.element?.[currentLanguage] ||
+            world.element?.te ||
+            world.element?.en ||
+            "";
+
+
+          const description =
+            world.description?.[currentLanguage] ||
+            world.description?.te ||
+            world.description?.en ||
+            "";
+
+
+          return `
+
+            <a
+              class="world-mini-card"
+              href="../${world.link}"
+              data-world="${world.id}"
+            >
+
+              <span class="world-mini-symbol">
+                ${world.symbol || "✦"}
+              </span>
+
+              <span class="world-mini-info">
+
+                <strong>
+                  ${name}
+                </strong>
+
+                <small>
+                  ${element}
+                </small>
+
+                <span>
+                  ${description}
+                </span>
+
+              </span>
+
+            </a>
+
+          `;
+
+        })
+        .join("");
+
+  }
+
+
+
+  buildWorldsMenu();
+
+
+
+  /*
+   * Rebuild world menu whenever
+   * language changes.
+   */
+
+  document
+    .querySelectorAll(
+      ".language-button"
+    )
+    .forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          setTimeout(
+            buildWorldsMenu,
+            0
+          );
+
+        }
+      );
+
+    });
+
+
+
+  /* -------------------------------------------------------
+     CLOSE WORLDS MENU
+     ------------------------------------------------------- */
+
   document.addEventListener(
     "click",
     event => {
 
-      if (
-        worldsMenu &&
-        !worldsMenu.contains(event.target) &&
+      if (!worldsMenu) {
+        return;
+      }
+
+
+      const clickedInsideMenu =
+        worldsMenu.contains(
+          event.target
+        );
+
+
+      const clickedButton =
         worldsButton &&
-        !worldsButton.contains(event.target)
+        worldsButton.contains(
+          event.target
+        );
+
+
+      if (
+        !clickedInsideMenu &&
+        !clickedButton
       ) {
 
         closeWorldsMenu();
@@ -329,35 +412,148 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
 
-  /* =======================================================
-     MOBILE MENU
-     ======================================================= */
 
-  if (mobileMenuButton) {
+  /* -------------------------------------------------------
+     ESC KEY
+     ------------------------------------------------------- */
 
-    mobileMenuButton.addEventListener(
-      "click",
-      () => {
+  document.addEventListener(
+    "keydown",
+    event => {
 
-        const isOpen =
-          mainNavigation.classList.contains("open");
+      if (
+        event.key === "Escape"
+      ) {
 
-        mainNavigation.classList.toggle(
-          "open"
-        );
+        closeWorldsMenu();
 
-        mobileMenuButton.setAttribute(
-          "aria-expanded",
-          String(!isOpen)
-        );
+        closeMobileMenu();
 
       }
+
+    }
+  );
+
+
+
+  /* -------------------------------------------------------
+     MOBILE MENU
+     ------------------------------------------------------- */
+
+  const mobileButton =
+    document.getElementById(
+      "mobile-menu-button"
+    );
+
+
+  const mainNavigation =
+    document.querySelector(
+      ".main-nav"
+    );
+
+
+
+  function openMobileMenu() {
+
+    if (!mainNavigation) {
+      return;
+    }
+
+
+    mainNavigation.classList.add(
+      "is-open"
+    );
+
+
+    if (mobileButton) {
+
+      mobileButton.classList.add(
+        "is-open"
+      );
+
+
+      mobileButton.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+    }
+
+  }
+
+
+
+  function closeMobileMenu() {
+
+    if (!mainNavigation) {
+      return;
+    }
+
+
+    mainNavigation.classList.remove(
+      "is-open"
+    );
+
+
+    if (mobileButton) {
+
+      mobileButton.classList.remove(
+        "is-open"
+      );
+
+
+      mobileButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+  }
+
+
+
+  function toggleMobileMenu() {
+
+    if (!mainNavigation) {
+      return;
+    }
+
+
+    const open =
+      mainNavigation.classList.contains(
+        "is-open"
+      );
+
+
+    if (open) {
+
+      closeMobileMenu();
+
+    } else {
+
+      openMobileMenu();
+
+    }
+
+  }
+
+
+
+  if (mobileButton) {
+
+    mobileButton.addEventListener(
+      "click",
+      toggleMobileMenu
     );
 
   }
 
 
-  /* Close mobile menu after navigation */
+
+  /* -------------------------------------------------------
+     CLOSE MOBILE MENU WHEN LINK IS CLICKED
+     ------------------------------------------------------- */
 
   if (mainNavigation) {
 
@@ -369,18 +565,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "click",
           () => {
 
-            mainNavigation.classList.remove(
-              "open"
-            );
-
-            if (mobileMenuButton) {
-
-              mobileMenuButton.setAttribute(
-                "aria-expanded",
-                "false"
-              );
-
-            }
+            closeMobileMenu();
 
           }
         );
@@ -390,225 +575,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* =======================================================
-     PROJECTS
-     ======================================================= */
 
-  function renderProjects(filter = "all") {
-
-    if (!projectsGrid) {
-      return;
-    }
-
-    const projects =
-      Array.isArray(data.projects)
-        ? data.projects
-        : [];
-
-    const filteredProjects =
-      filter === "all"
-        ? projects
-        : projects.filter(
-            project =>
-              project.category === filter
-          );
-
-
-    /* Empty state */
-
-    if (filteredProjects.length === 0) {
-
-      projectsGrid.innerHTML = `
-        <div class="projects-empty">
-          <span>GI</span>
-          <p>
-            ${currentLanguage === "te"
-              ? "ఈ ప్రపంచంలో కొత్త ప్రయాణాలు త్వరలో..."
-              : "New journeys in this world are coming soon..."}
-          </p>
-        </div>
-      `;
-
-      return;
-    }
-
-
-    /* Render projects */
-
-    projectsGrid.innerHTML =
-      filteredProjects
-        .map(project => {
-
-          const title =
-            getText(project.title);
-
-          const description =
-            getText(project.description);
-
-          const image =
-            project.image || "";
-
-          const link =
-            project.link || "#";
-
-          return `
-
-            <article
-              class="project-card"
-              data-category="${project.category}"
-            >
-
-              <a
-                href="${link}"
-                class="project-card-link"
-              >
-
-                <div
-                  class="project-image"
-                  style="
-                    background-image:
-                    url('${image}');
-                  "
-                ></div>
-
-                <div class="project-content">
-
-                  <span>
-                    ${project.category}
-                  </span>
-
-                  <h3>
-                    ${title}
-                  </h3>
-
-                  <p>
-                    ${description}
-                  </p>
-
-                  <strong>
-                    ${
-                      currentLanguage === "te"
-                        ? "మరింత చూడండి →"
-                        : "Explore →"
-                    }
-                  </strong>
-
-                </div>
-
-              </a>
-
-            </article>
-
-          `;
-
-        })
-        .join("");
-
-  }
-
-
-  /* =======================================================
-     PROJECT FILTERS
-     ======================================================= */
-
-  projectFilters.forEach(button => {
-
-    button.addEventListener(
-      "click",
-      () => {
-
-        const filter =
-          button.dataset.filter ||
-          "all";
-
-
-        projectFilters.forEach(
-          item => {
-
-            item.classList.remove(
-              "active"
-            );
-
-          }
-        );
-
-
-        button.classList.add(
-          "active"
-        );
-
-
-        renderProjects(filter);
-
-      }
-    );
-
-  });
-
-
-  /* =======================================================
-     CONTACT LINKS
-     ======================================================= */
-
-  const emailLink =
-    document.getElementById("email-link");
-
-  const whatsappLink =
-    document.getElementById("whatsapp-link");
-
-  const socialLink =
-    document.getElementById("social-link");
-
-
-  if (emailLink && data.contact.email) {
-
-    emailLink.href =
-      `mailto:${data.contact.email}`;
-
-  }
-
-
-  if (
-    whatsappLink &&
-    data.contact.whatsapp
-  ) {
-
-    whatsappLink.href =
-      data.contact.whatsapp;
-
-  }
-
-
-  if (
-    socialLink &&
-    data.contact.social &&
-    data.contact.social.instagram
-  ) {
-
-    socialLink.href =
-      data.contact.social.instagram;
-
-  }
-
-
-  /* =======================================================
-     CURRENT YEAR
-     ======================================================= */
-
-  if (currentYear) {
-
-    currentYear.textContent =
-      new Date().getFullYear();
-
-  }
-
-
-  /* =======================================================
-     SMOOTH INTERNAL LINKS
-     ======================================================= */
+  /* -------------------------------------------------------
+     SMOOTH SCROLL
+     ------------------------------------------------------- */
 
   document
-    .querySelectorAll('a[href^="#"]')
+    .querySelectorAll(
+      'a[href^="#"]'
+    )
     .forEach(link => {
 
       link.addEventListener(
@@ -616,30 +591,44 @@ document.addEventListener("DOMContentLoaded", () => {
         event => {
 
           const targetId =
-            link.getAttribute("href");
+            link.getAttribute(
+              "href"
+            );
+
 
           if (
             !targetId ||
             targetId === "#"
           ) {
+
             return;
+
           }
 
+
           const target =
-            document.querySelector(targetId);
+            document.querySelector(
+              targetId
+            );
+
 
           if (!target) {
             return;
           }
 
+
           event.preventDefault();
 
-          closeWorldsMenu();
 
           target.scrollIntoView({
             behavior: "smooth",
             block: "start"
           });
+
+
+          closeWorldsMenu();
+
+          closeMobileMenu();
 
         }
       );
@@ -647,26 +636,190 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-  /* =======================================================
-     INITIALISE
-     ======================================================= */
 
-  updateStaticText();
+  /* -------------------------------------------------------
+     CURRENT YEAR
+     ------------------------------------------------------- */
 
-  renderProjects("all");
+  const yearElements =
+    document.querySelectorAll(
+      "#current-year"
+    );
 
 
-  /* =======================================================
-     CONSOLE BRAND MESSAGE
-     ======================================================= */
+  const currentYear =
+    new Date().getFullYear();
 
-  console.log(
-    "%cGI Creative Space",
-    "font-size:20px;font-weight:bold;"
+
+  yearElements.forEach(
+    element => {
+
+      element.textContent =
+        currentYear;
+
+    }
   );
 
-  console.log(
-    "Godavari Roots. Ippanapadu Soul."
+
+
+  /* -------------------------------------------------------
+     HEADER SCROLL EFFECT
+     ------------------------------------------------------- */
+
+  const header =
+    document.querySelector(
+      ".site-header"
+    );
+
+
+  function updateHeader() {
+
+    if (!header) {
+      return;
+    }
+
+
+    if (window.scrollY > 40) {
+
+      header.classList.add(
+        "scrolled"
+      );
+
+    } else {
+
+      header.classList.remove(
+        "scrolled"
+      );
+
+    }
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    updateHeader,
+    {
+      passive: true
+    }
+  );
+
+
+  updateHeader();
+
+
+
+  /* -------------------------------------------------------
+     REVEAL ANIMATION
+     ------------------------------------------------------- */
+
+  const revealElements =
+    document.querySelectorAll(
+      ".section-container > *,
+       .world-card,
+       .project-card,
+       .projects-empty"
+    );
+
+
+  if (
+    "IntersectionObserver"
+    in window
+  ) {
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(
+            entry => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "is-visible"
+                );
+
+
+                revealObserver.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(
+      element => {
+
+        element.classList.add(
+          "reveal"
+        );
+
+        revealObserver.observe(
+          element
+        );
+
+      }
+    );
+
+  } else {
+
+    revealElements.forEach(
+      element => {
+
+        element.classList.add(
+          "is-visible"
+        );
+
+      }
+    );
+
+  }
+
+
+
+  /* -------------------------------------------------------
+     IMAGE FALLBACK
+     ------------------------------------------------------- */
+
+  document
+    .querySelectorAll(
+      "img"
+    )
+    .forEach(image => {
+
+      image.addEventListener(
+        "error",
+        () => {
+
+          image.classList.add(
+            "image-error"
+          );
+
+        }
+      );
+
+    });
+
+
+
+  /* -------------------------------------------------------
+     INITIAL LANGUAGE
+     ------------------------------------------------------- */
+
+  setLanguage(
+    currentLanguage
   );
 
 });
