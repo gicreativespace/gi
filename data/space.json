@@ -1,0 +1,154 @@
+{
+  "section": {
+    "id": "space",
+    "name": "GI.Space",
+
+    "element": {
+      "te": "ఆకాశం",
+      "en": "SPACE"
+    },
+
+    "title": {
+      "te": "ఆలోచనలకు హద్దులు లేని చోటు.",
+      "en": "Where Ideas Have No Limits."
+    },
+
+    "tagline": {
+      "te": "Where Ideas Flow Into Vision.",
+      "en": "Where Ideas Flow Into Vision."
+    },
+
+    "description": {
+      "te": "ఇంకా రూపం దాల్చని ఆలోచనలకు, కొత్త ఊహలకు, ప్రయోగాలకు మరియు భవిష్యత్ సృష్టులకు ఒక అపరిమితమైన స్థలం.",
+      "en": "An infinite space for ideas, imagination, experiments and visions that are yet to take shape."
+    },
+
+    "heroImage": "assets/images/space/hero.jpg"
+  },
+
+  "intro": {
+    "te": "ప్రతి సృష్టి ఒక ఆలోచనతో మొదలవుతుంది. ఆ ఆలోచనకు మొదటి ప్రపంచం GI.Space.",
+    "en": "Every creation begins with an idea. GI.Space is where that idea begins its journey."
+  },
+
+  "philosophy": {
+    "title": {
+      "te": "ఆలోచనకు ముందే ఒక ప్రపంచం ఉంటుంది.",
+      "en": "Before every creation, there is a world of thought."
+    },
+
+    "description": {
+      "te": "ఒక చిన్న ఆలోచన కావచ్చు. ఒక కొత్త కథ కావచ్చు. ఒక ప్రయోగం కావచ్చు. ఒక కల కావచ్చు. అది ఇంకా ఏ రూపంలో లేకపోయినా, దానికి ఒక స్థలం కావాలి. అదే GI.Space.",
+      "en": "It may be a small idea, a new story, an experiment or a dream. Even before it takes shape, it needs a place to exist. That place is GI.Space."
+    }
+  },
+
+  "ideaTypes": [
+    {
+      "id": "ideas",
+
+      "title": {
+        "te": "ఆలోచనలు",
+        "en": "Ideas"
+      },
+
+      "description": {
+        "te": "మనసులో మెదిలే కొత్త ఆలోచనలకు మొదటి స్థలం.",
+        "en": "The first space for new thoughts and possibilities."
+      },
+
+      "symbol": "✦"
+    },
+
+    {
+      "id": "experiments",
+
+      "title": {
+        "te": "ప్రయోగాలు",
+        "en": "Experiments"
+      },
+
+      "description": {
+        "te": "కొత్తగా ప్రయత్నించడానికి, పరీక్షించడానికి మరియు నేర్చుకోవడానికి స్వేచ్ఛ.",
+        "en": "Freedom to explore, test, experiment and learn."
+      },
+
+      "symbol": "◇"
+    },
+
+    {
+      "id": "visions",
+
+      "title": {
+        "te": "విజన్స్",
+        "en": "Visions"
+      },
+
+      "description": {
+        "te": "ఒక ఆలోచన ఎక్కడికి వెళ్లగలదో ఊహించే ప్రపంచం.",
+        "en": "A space to imagine where an idea can go."
+      },
+
+      "symbol": "∞"
+    },
+
+    {
+      "id": "future",
+      
+      "title": {
+        "te": "భవిష్యత్",
+        "en": "Future"
+      },
+
+      "description": {
+        "te": "ఇంకా మొదలుకాని రేపటి సృష్టులకు స్థలం.",
+        "en": "A space for creations that have not begun yet."
+      },
+
+      "symbol": "✧"
+    }
+  ],
+
+  "ideas": [],
+
+  "visions": [],
+
+  "experiments": [],
+
+  "projects": [],
+
+  "featured": {
+    "title": {
+      "te": "ఒక ఆలోచన... ఒక కొత్త ప్రపంచం.",
+      "en": "One Idea... A New World."
+    },
+
+    "description": {
+      "te": "ప్రతి పెద్ద సృష్టి ఎప్పుడో ఒక చిన్న ఆలోచనగానే మొదలైంది.",
+      "en": "Every great creation once began as a simple idea."
+    },
+
+    "image": "assets/images/space/featured.jpg",
+
+    "link": "#ideas"
+  },
+
+  "cta": {
+    "title": {
+      "te": "మీ ఆలోచనకు స్థలం ఇవ్వండి.",
+      "en": "Give Your Idea a Space."
+    },
+
+    "description": {
+      "te": "ఆలోచించండి. ఊహించండి. ప్రయోగించండి. సృష్టించండి.",
+      "en": "Think. Imagine. Experiment. Create."
+    },
+
+    "button": {
+      "te": "GI.Space లోకి ప్రవేశించండి →",
+      "en": "Enter GI.Space →"
+    },
+
+    "link": "#ideas"
+  }
+}
