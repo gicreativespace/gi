@@ -11,17 +11,22 @@
   >
 
   <title>
-    GI Creative Space — ఆలోచనలకు ఒక ప్రపంచం
+    GI Creative Space
   </title>
 
   <meta
     name="description"
-    content="GI Creative Space — Godavari roots, Ippanapadu soul, and infinite ideas."
+    content="GI Creative Space — Godavari Roots • Ippanapadu Soul • Infinite Ideas"
   >
 
   <link
     rel="stylesheet"
     href="assets/css/styles.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="assets/css/home.css"
   >
 
 </head>
@@ -31,775 +36,921 @@
 
 
   <!-- =====================================================
-       CINEMATIC ENTRY
+       HEADER
        ===================================================== -->
 
-  <section
-    class="entry-screen"
-    id="entry-screen"
-  >
+  <header class="site-header">
 
-    <div class="entry-stars"></div>
+    <div class="header-inner">
 
-    <div class="entry-glow"></div>
 
-    <div class="entry-content">
+      <!-- LOGO -->
 
-      <div class="entry-logo">
-        GI
-      </div>
-
-      <span class="entry-overline">
-        GI CREATIVE SPACE
-      </span>
-
-      <h1>
-        స్వాగతం.
-      </h1>
-
-      <p>
-        ఒక కొత్త ప్రపంచంలోకి
-        అడుగుపెట్టండి.
-      </p>
-
-      <button
-        class="enter-button"
-        id="enter-space"
-        type="button"
+      <a
+        href="index.html"
+        class="brand"
+        aria-label="GI Creative Space"
       >
-        ప్రపంచంలోకి ప్రవేశించండి
-        <span>→</span>
-      </button>
 
-    </div>
+        <span class="brand-mark">
+          GI
+        </span>
 
-  </section>
+        <span class="brand-name">
+          Creative Space
+        </span>
 
-
-
-  <!-- =====================================================
-       MAIN WEBSITE
-       ===================================================== -->
-
-  <div
-    class="home-world"
-    id="home-world"
-  >
+      </a>
 
 
-    <!-- ===================================================
-         HEADER
-         =================================================== -->
+      <!-- NAVIGATION -->
 
-    <header class="site-header">
-
-      <div class="header-inner">
+      <nav class="main-nav">
 
 
         <a
-          href="index.html"
-          class="brand"
+          href="#home"
+          data-te="హోమ్"
+          data-en="Home"
         >
-
-          <span class="brand-mark">
-            GI
-          </span>
-
-          <span class="brand-name">
-            Creative Space
-          </span>
-
+          హోమ్
         </a>
 
 
-        <nav class="main-nav">
-
-          <a
-            href="#home"
-            data-te="హోమ్"
-            data-en="Home"
-          >
-            హోమ్
-          </a>
-
-
-          <button
-            id="worlds-button"
-            type="button"
-            aria-expanded="false"
+        <button
+          id="worlds-button"
+          type="button"
+          aria-expanded="false"
+        >
+          <span
             data-te="విశ్వం"
             data-en="Worlds"
           >
             విశ్వం
-          </button>
+          </span>
+        </button>
 
 
-          <a
-            href="#panchabhutas"
-            data-te="పంచభూతాలు"
-            data-en="Panchabhutas"
-          >
-            పంచభూతాలు
-          </a>
+        <a
+          href="#panchabhutas"
+          data-te="పంచభూతాలు"
+          data-en="Panchabhutas"
+        >
+          పంచభూతాలు
+        </a>
 
 
-          <a
-            href="#about"
-            data-te="మన ఆలోచన"
-            data-en="Our Thought"
-          >
-            మన ఆలోచన
-          </a>
+        <a
+          href="#about"
+          data-te="మన ఆలోచన"
+          data-en="Our Thought"
+        >
+          మన ఆలోచన
+        </a>
 
 
-          <a
-            href="#contact"
-            data-te="సంప్రదించండి"
-            data-en="Contact"
-          >
-            సంప్రదించండి
-          </a>
+        <a
+          href="#contact"
+          data-te="సంప్రదించండి"
+          data-en="Contact"
+        >
+          సంప్రదించండి
+        </a>
 
-        </nav>
-
-
-        <!-- LANGUAGE -->
-
-        <div class="language-switch">
-
-          <button
-            class="language-button active"
-            data-language="te"
-            type="button"
-          >
-            తెలుగు
-          </button>
-
-          <span>|</span>
-
-          <button
-            class="language-button"
-            data-language="en"
-            type="button"
-          >
-            EN
-          </button>
-
-        </div>
+      </nav>
 
 
-        <!-- MOBILE -->
+      <!-- LANGUAGE SWITCH -->
+
+      <div class="language-switch">
 
         <button
-          class="mobile-menu-button"
-          id="mobile-menu-button"
+          class="language-button active"
+          data-language="te"
           type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
         >
+          తెలుగు
+        </button>
 
-          <span></span>
-          <span></span>
-          <span></span>
+        <span>|</span>
 
+        <button
+          class="language-button"
+          data-language="en"
+          type="button"
+        >
+          EN
         </button>
 
       </div>
 
 
-      <!-- WORLDS MENU -->
+      <!-- MOBILE MENU -->
 
-      <div
-        class="worlds-menu"
-        id="worlds-menu"
-        aria-hidden="true"
+      <button
+        class="mobile-menu-button"
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Menu"
+        aria-expanded="false"
       >
 
-        <div class="worlds-menu-inner">
+        <span></span>
+        <span></span>
+        <span></span>
 
-          <div class="worlds-intro">
+      </button>
 
-            <span>
-              GI CREATIVE SPACE
-            </span>
-
-            <h2>
-              మన ఐదు ప్రపంచాలు
-            </h2>
-
-            <p>
-              ఒకే విశ్వం • ఐదు సృజనాత్మక శక్తులు
-            </p>
-
-          </div>
+    </div>
 
 
-          <div
-            class="worlds-mini-grid"
-            id="worlds-mini-grid"
-          ></div>
+    <!-- ===================================================
+         WORLDS DROPDOWN
+         =================================================== -->
+
+    <div
+      class="worlds-menu"
+      id="worlds-menu"
+      aria-hidden="true"
+    >
+
+      <div class="worlds-menu-inner">
+
+
+        <div class="worlds-intro">
+
+          <span>
+            GI CREATIVE SPACE
+          </span>
+
+          <h2
+            data-te="మన ఐదు ప్రపంచాలు"
+            data-en="Our Five Worlds"
+          >
+            మన ఐదు ప్రపంచాలు
+          </h2>
+
+          <p
+            data-te="ఒకే విశ్వం • ఐదు సృజనాత్మక ప్రవాహాలు"
+            data-en="One universe • Five creative flows"
+          >
+            ఒకే విశ్వం • ఐదు సృజనాత్మక ప్రవాహాలు
+          </p>
 
         </div>
 
+
+        <div
+          class="worlds-mini-grid"
+          id="worlds-mini-grid"
+        ></div>
+
+
       </div>
 
-    </header>
+    </div>
 
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main id="home">
 
 
     <!-- ===================================================
          GODAVARI HERO
          =================================================== -->
 
-    <main id="home">
+    <section class="godavari-hero">
 
 
-      <section class="godavari-hero">
+      <div class="godavari-sky"></div>
 
+      <div class="godavari-stars"></div>
 
-        <div class="godavari-sky"></div>
+      <div class="godavari-horizon"></div>
 
-        <div class="godavari-stars"></div>
 
+      <div class="godavari-river">
 
-        <div class="godavari-river">
+        <div class="river-light"></div>
 
-          <div class="river-light"></div>
+      </div>
 
-        </div>
 
+      <div class="godavari-content">
 
-        <div class="godavari-horizon"></div>
 
+        <span class="hero-overline">
 
-        <div class="godavari-content">
+          GODAVARI • IPPANAPADU • GI
 
+        </span>
 
-          <span class="hero-overline">
-            GODAVARI • IPPANAPADU • GI
-          </span>
 
+        <h1
+          data-te="గోదావరి ఒడ్డున పుట్టిన ఆలోచనలకు ఒక ప్రపంచం."
+          data-en="A world for ideas born by the Godavari."
+        >
 
-          <h1>
-            గోదావరి ఒడ్డున
-            పుట్టిన ఆలోచనలకు
-            ఒక ప్రపంచం.
-          </h1>
+          గోదావరి ఒడ్డున
+          పుట్టిన ఆలోచనలకు
+          ఒక ప్రపంచం.
 
+        </h1>
 
-          <p class="godavari-tagline">
-            మనసులో పుట్టే ప్రతి ఆలోచనకు
-            ఒక ప్రవాహం ఉంటుంది.
-          </p>
 
+        <p
+          class="godavari-tagline"
+          data-te="మనసులో పుట్టే ప్రతి ఆలోచనకు ఒక ప్రవాహం ఉంటుంది."
+          data-en="Every idea born in the mind has a flow."
+        >
 
-          <p class="godavari-description">
-            ఆలోచనలు, భావాలు, జ్ఞానం,
-            సృజనాత్మకత మరియు
-            భవిష్యత్ విజన్స్ —
-            ఇవన్నీ ఒకే చోట
-            కలుసుకునే స్థలం.
-          </p>
+          మనసులో పుట్టే ప్రతి ఆలోచనకు
+          ఒక ప్రవాహం ఉంటుంది.
 
+        </p>
 
-          <a
-            href="#panchabhutas"
-            class="primary-button"
-          >
-            మన ప్రపంచాన్ని చూడండి →
-          </a>
 
-        </div>
+        <p
+          class="godavari-description"
+          data-te="ఆలోచనలు, భావాలు, జ్ఞానం, సృజనాత్మకత మరియు భవిష్యత్ విజన్స్ — ఇవన్నీ ఒకే చోట కలుసుకునే స్థలం."
+          data-en="Ideas, emotions, knowledge, creativity and future visions — all meeting in one space."
+        >
 
+          ఆలోచనలు, భావాలు, జ్ఞానం,
+          సృజనాత్మకత మరియు
+          భవిష్యత్ విజన్స్ —
+          ఇవన్నీ ఒకే చోట
+          కలుసుకునే స్థలం.
 
-        <div class="river-scroll">
+        </p>
 
-          <span>
-            FLOW
-          </span>
 
-          <i></i>
+        <a
+          href="#panchabhutas"
+          class="primary-button"
+          data-te="మన ప్రపంచాన్ని చూడండి →"
+          data-en="Explore Our World →"
+        >
 
-        </div>
+          మన ప్రపంచాన్ని చూడండి →
 
+        </a>
 
-      </section>
 
+      </div>
 
 
-      <!-- =================================================
-           OUR THOUGHT
-           ================================================= -->
+      <div class="river-scroll">
 
-      <section
-        class="philosophy-section home-philosophy"
-        id="about"
-      >
+        <span>
+          FLOW
+        </span>
 
-        <div class="section-container">
+        <i></i>
 
+      </div>
 
-          <span class="section-label">
-            OUR THOUGHT
-          </span>
 
-
-          <h2>
-            మన ఆలోచనకు
-            ఒక రూపం ఇవ్వాలి.
-          </h2>
-
-
-          <p class="section-description">
-
-            మన చుట్టూ ఉన్న ప్రపంచం నుంచి
-            మనం చూస్తాం.
-            మన అనుభవాల నుంచి
-            మనం ఆలోచిస్తాం.
-            మన ఊహల నుంచి
-            మనం సృష్టిస్తాం.
-
-            <br><br>
-
-            ఆ ఆలోచనలకు
-            ఒక స్థలం కావాలి.
-
-            అదే —
-
-            <strong>
-              GI Creative Space.
-            </strong>
-
-          </p>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- =================================================
-           PANCHABHUTAS
-           ================================================= -->
-
-      <section
-        class="panchabhutas-section"
-        id="panchabhutas"
-      >
-
-
-        <div class="section-container">
-
-
-          <div class="section-heading">
-
-
-            <span class="section-label">
-              PANCHABHUTAS
-            </span>
-
-
-            <h2>
-              మన ప్రపంచం.
-              ఐదు మూలాలు.
-            </h2>
-
-
-            <p>
-              ప్రకృతిలోని ఐదు మూలాల్లాగే
-              మన ఆలోచనలకు కూడా
-              ఐదు ప్రవాహాలు ఉన్నాయి.
-            </p>
-
-          </div>
-
-
-
-          <div
-            class="panchabhuta-orbit"
-            id="panchabhuta-orbit"
-          >
-
-
-            <div class="orbit-ring"></div>
-
-
-            <div class="orbit-center">
-
-              <span>
-                GI
-              </span>
-
-              <small>
-                CREATIVE SPACE
-              </small>
-
-            </div>
-
-
-            <!-- WATER -->
-
-            <a
-              href="pages/writings.html"
-              class="element-node element-water"
-            >
-
-              <span class="node-symbol">
-                ≈
-              </span>
-
-              <strong>
-                జలం
-              </strong>
-
-              <small>
-                GI.Writings
-              </small>
-
-            </a>
-
-
-            <!-- FIRE -->
-
-            <a
-              href="pages/devotional.html"
-              class="element-node element-fire"
-            >
-
-              <span class="node-symbol">
-                ✦
-              </span>
-
-              <strong>
-                అగ్ని
-              </strong>
-
-              <small>
-                GI.Devotional
-              </small>
-
-            </a>
-
-
-            <!-- AIR -->
-
-            <a
-              href="pages/media.html"
-              class="element-node element-air"
-            >
-
-              <span class="node-symbol">
-                〰
-              </span>
-
-              <strong>
-                వాయువు
-              </strong>
-
-              <small>
-                GI.Media
-              </small>
-
-            </a>
-
-
-            <!-- EARTH -->
-
-            <a
-              href="pages/education.html"
-              class="element-node element-earth"
-            >
-
-              <span class="node-symbol">
-                ◇
-              </span>
-
-              <strong>
-                భూమి
-              </strong>
-
-              <small>
-                GI.Education
-              </small>
-
-            </a>
-
-
-            <!-- SPACE -->
-
-            <a
-              href="pages/space.html"
-              class="element-node element-space"
-            >
-
-              <span class="node-symbol">
-                ∞
-              </span>
-
-              <strong>
-                ఆకాశం
-              </strong>
-
-              <small>
-                GI.Space
-              </small>
-
-            </a>
-
-
-          </div>
-
-
-        </div>
-
-      </section>
-
-
-
-      <!-- =================================================
-           FIVE WORLDS
-           ================================================= -->
-
-      <section
-        class="worlds-section home-worlds"
-        id="worlds"
-      >
-
-
-        <div class="section-container">
-
-
-          <div class="section-heading">
-
-
-            <span class="section-label">
-              EXPLORE GI
-            </span>
-
-
-            <h2>
-              మీకు నచ్చిన
-              ప్రపంచంలోకి వెళ్లండి.
-            </h2>
-
-
-            <p>
-              ఒక్కో ప్రపంచం ఒక ప్రత్యేక అనుభవం.
-              ఒక్కో ఆలోచనకు ఒక ప్రత్యేక దారి.
-            </p>
-
-
-          </div>
-
-
-          <div
-            class="world-grid"
-            id="home-world-grid"
-          ></div>
-
-
-        </div>
-
-      </section>
-
-
-
-      <!-- =================================================
-           GODAVARI SOUL
-           ================================================= -->
-
-      <section class="godavari-soul-section">
-
-
-        <div class="godavari-soul-overlay"></div>
-
-
-        <div class="section-container">
-
-
-          <span class="section-label">
-            OUR ROOTS
-          </span>
-
-
-          <h2>
-            గోదావరి మూలాలు.
-            ఇప్పనపాడు ఆత్మ.
-          </h2>
-
-
-          <p>
-            మనం ఎక్కడి నుంచి వచ్చామో
-            మర్చిపోకుండా,
-            మనం ఎక్కడికి వెళ్లాలనుకుంటున్నామో
-            ఊహించుకునే ప్రపంచం.
-          </p>
-
-
-          <span class="soul-mark">
-            GI
-          </span>
-
-
-        </div>
-
-      </section>
-
-
-
-      <!-- =================================================
-           CONTACT
-           ================================================= -->
-
-      <section
-        class="contact-section"
-        id="contact"
-      >
-
-
-        <div class="section-container">
-
-
-          <span class="section-label">
-            CONNECT
-          </span>
-
-
-          <h2>
-            ఒక ఆలోచన ఉందా?
-          </h2>
-
-
-          <p>
-            మనతో పంచుకోండి.
-            ఒక చిన్న ఆలోచన
-            మరో కొత్త ప్రపంచానికి
-            మొదలు కావచ్చు.
-          </p>
-
-
-          <div class="home-contact-actions">
-
-
-            <a
-              href="mailto:YOUR_EMAIL@example.com"
-              class="contact-button"
-            >
-              ఈమెయిల్ →
-            </a>
-
-
-            <a
-              href="#"
-              class="contact-button"
-            >
-              WhatsApp →
-            </a>
-
-
-          </div>
-
-
-        </div>
-
-      </section>
-
-
-    </main>
+    </section>
 
 
 
     <!-- ===================================================
-         FOOTER
+         OUR THOUGHT
          =================================================== -->
 
-    <footer class="site-footer">
+    <section
+      class="philosophy-section home-philosophy"
+      id="about"
+    >
+
+      <div class="section-container">
 
 
-      <div class="footer-inner">
+        <span
+          class="section-label"
+          data-te="మన ఆలోచన"
+          data-en="OUR THOUGHT"
+        >
+          మన ఆలోచన
+        </span>
 
 
-        <div class="footer-brand">
+        <h2
+          data-te="ఆలోచనకు ఒక స్థలం కావాలి."
+          data-en="Every idea needs a space."
+        >
+
+          ఆలోచనకు
+          ఒక స్థలం కావాలి.
+
+        </h2>
 
 
-          <div class="footer-logo">
-            GI
+        <p
+          class="section-description"
+          data-te="మన చుట్టూ ఉన్న ప్రపంచం నుంచి చూస్తాం. మన అనుభవాల నుంచి ఆలోచిస్తాం. మన ఊహల నుంచి సృష్టిస్తాం. ఆ ఆలోచనలకు ఒక స్థలం కావాలి. అదే GI Creative Space."
+          data-en="We observe the world around us. We think through our experiences. We create through imagination. Those ideas need a space. That is GI Creative Space."
+        >
+
+          మన చుట్టూ ఉన్న ప్రపంచం నుంచి
+          చూస్తాం.
+
+          మన అనుభవాల నుంచి
+          ఆలోచిస్తాం.
+
+          మన ఊహల నుంచి
+          సృష్టిస్తాం.
+
+          <br><br>
+
+          ఆ ఆలోచనలకు
+          ఒక స్థలం కావాలి.
+
+          అదే
+
+          <strong>
+            GI Creative Space.
+          </strong>
+
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         PANCHABHUTAS
+         =================================================== -->
+
+    <section
+      class="panchabhutas-section"
+      id="panchabhutas"
+    >
+
+      <div class="section-container">
+
+
+        <div class="section-heading">
+
+
+          <span
+            class="section-label"
+            data-te="పంచభూతాలు"
+            data-en="PANCHABHUTAS"
+          >
+            పంచభూతాలు
+          </span>
+
+
+          <h2
+            data-te="మన ప్రపంచం. ఐదు మూలాలు."
+            data-en="Our World. Five Elements."
+          >
+
+            మన ప్రపంచం.
+            ఐదు మూలాలు.
+
+          </h2>
+
+
+          <p
+            data-te="ప్రకృతిలోని ఐదు మూలాల్లాగే మన ఆలోచనలకు కూడా ఐదు ప్రవాహాలు ఉన్నాయి."
+            data-en="Just as nature has five elements, our ideas have five creative flows."
+          >
+
+            ప్రకృతిలోని ఐదు మూలాల్లాగే
+            మన ఆలోచనలకు కూడా
+            ఐదు ప్రవాహాలు ఉన్నాయి.
+
+          </p>
+
+
+        </div>
+
+
+
+        <!-- ORBIT -->
+
+        <div class="panchabhuta-orbit">
+
+
+          <div class="orbit-ring"></div>
+
+
+          <div class="orbit-center">
+
+            <span>
+              GI
+            </span>
+
+            <small>
+              CREATIVE SPACE
+            </small>
+
           </div>
 
 
-          <div>
+          <!-- JALAM -->
+
+          <a
+            href="pages/writings.html"
+            class="element-node element-water"
+          >
+
+            <span class="node-symbol">
+              ≈
+            </span>
 
             <strong>
-              GI Creative Space
+              జలం
             </strong>
 
-            <p>
-              Godavari Roots. Ippanapadu Soul.
+            <small>
+              GI.Writings
+            </small>
+
+          </a>
+
+
+          <!-- AGNI -->
+
+          <a
+            href="pages/devotional.html"
+            class="element-node element-fire"
+          >
+
+            <span class="node-symbol">
+              ✦
+            </span>
+
+            <strong>
+              అగ్ని
+            </strong>
+
+            <small>
+              GI.Devotional
+            </small>
+
+          </a>
+
+
+          <!-- VAYUVU -->
+
+          <a
+            href="pages/media.html"
+            class="element-node element-air"
+          >
+
+            <span class="node-symbol">
+              〰
+            </span>
+
+            <strong>
+              వాయువు
+            </strong>
+
+            <small>
+              GI.Media
+            </small>
+
+          </a>
+
+
+          <!-- BHUMI -->
+
+          <a
+            href="pages/education.html"
+            class="element-node element-earth"
+          >
+
+            <span class="node-symbol">
+              ◇
+            </span>
+
+            <strong>
+              భూమి
+            </strong>
+
+            <small>
+              GI.Education
+            </small>
+
+          </a>
+
+
+          <!-- AAKASHAM -->
+
+          <a
+            href="pages/space.html"
+            class="element-node element-space"
+          >
+
+            <span class="node-symbol">
+              ∞
+            </span>
+
+            <strong>
+              ఆకాశం
+            </strong>
+
+            <small>
+              GI.Space
+            </small>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         FIVE WORLDS
+         =================================================== -->
+
+    <section
+      class="worlds-section home-worlds"
+      id="worlds"
+    >
+
+      <div class="section-container">
+
+
+        <div class="section-heading">
+
+
+          <span
+            class="section-label"
+            data-te="GI ప్రపంచాలు"
+            data-en="GI WORLDS"
+          >
+            GI ప్రపంచాలు
+          </span>
+
+
+          <h2
+            data-te="మీకు నచ్చిన ప్రపంచంలోకి వెళ్లండి."
+            data-en="Enter the world that speaks to you."
+          >
+
+            మీకు నచ్చిన
+            ప్రపంచంలోకి వెళ్లండి.
+
+          </h2>
+
+
+          <p
+            data-te="ఒక్కో ప్రపంచం ఒక ప్రత్యేక అనుభవం. ఒక్కో ఆలోచనకు ఒక ప్రత్యేక దారి."
+            data-en="Every world is a different experience. Every idea has its own path."
+          >
+
+            ఒక్కో ప్రపంచం ఒక ప్రత్యేక అనుభవం.
+            ఒక్కో ఆలోచనకు ఒక ప్రత్యేక దారి.
+
+          </p>
+
+
+        </div>
+
+
+        <div
+          class="world-grid"
+          id="home-world-grid"
+        ></div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         GODAVARI ROOTS
+         =================================================== -->
+
+    <section class="godavari-soul-section">
+
+
+      <div class="godavari-soul-overlay"></div>
+
+
+      <div class="section-container">
+
+
+        <span
+          class="section-label"
+          data-te="మన మూలాలు"
+          data-en="OUR ROOTS"
+        >
+          మన మూలాలు
+        </span>
+
+
+        <h2
+          data-te="గోదావరి మూలాలు. ఇప్పనపాడు ఆత్మ."
+          data-en="Godavari Roots. Ippanapadu Soul."
+        >
+
+          గోదావరి మూలాలు.
+          ఇప్పనపాడు ఆత్మ.
+
+        </h2>
+
+
+        <p
+          data-te="మనం ఎక్కడి నుంచి వచ్చామో మర్చిపోకుండా, మనం ఎక్కడికి వెళ్లాలనుకుంటున్నామో ఊహించుకునే ప్రపంచం."
+          data-en="A space that remembers where we came from while imagining where we can go."
+        >
+
+          మనం ఎక్కడి నుంచి వచ్చామో
+          మర్చిపోకుండా,
+
+          మనం ఎక్కడికి వెళ్లాలనుకుంటున్నామో
+          ఊహించుకునే ప్రపంచం.
+
+        </p>
+
+
+        <span class="soul-mark">
+          GI
+        </span>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         PROJECTS
+         =================================================== -->
+
+    <section
+      class="projects-section"
+      id="projects"
+    >
+
+      <div class="section-container">
+
+
+        <div class="section-heading">
+
+
+          <span
+            class="section-label"
+            data-te="మన పనులు"
+            data-en="OUR WORK"
+          >
+            మన పనులు
+          </span>
+
+
+          <h2
+            data-te="ఆలోచనలు రూపం దాల్చినప్పుడు."
+            data-en="When ideas take form."
+          >
+
+            ఆలోచనలు
+            రూపం దాల్చినప్పుడు.
+
+          </h2>
+
+
+          <p
+            data-te="ఇక్కడ మనం చేసిన ప్రాజెక్టులు, ప్రయోగాలు, సృజనాత్మక పనులు మరియు భవిష్యత్ ఆలోచనలు కనిపిస్తాయి."
+            data-en="A space for our projects, experiments, creative work and future ideas."
+          >
+
+            ఇక్కడ మనం చేసిన ప్రాజెక్టులు,
+            ప్రయోగాలు, సృజనాత్మక పనులు
+            మరియు భవిష్యత్ ఆలోచనలు కనిపిస్తాయి.
+
+          </p>
+
+
+        </div>
+
+
+        <div
+          class="projects-grid"
+          id="projects-grid"
+        >
+
+          <div class="projects-empty">
+
+            <span>
+              ∞
+            </span>
+
+            <p
+              data-te="మన తదుపరి ఆలోచన ఇక్కడ మొదలవుతుంది."
+              data-en="Our next idea begins here."
+            >
+
+              మన తదుపరి ఆలోచన
+              ఇక్కడ మొదలవుతుంది.
+
             </p>
 
           </div>
-
-
-        </div>
-
-
-        <div class="footer-links">
-
-          <a href="#home">
-            హోమ్
-          </a>
-
-          <a href="#panchabhutas">
-            పంచభూతాలు
-          </a>
-
-          <a href="#worlds">
-            ప్రపంచాలు
-          </a>
-
-          <a href="#about">
-            మన ఆలోచన
-          </a>
-
-          <a href="#contact">
-            సంప్రదించండి
-          </a>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-          <span>
-            © <span id="current-year"></span>
-            GI Creative Space
-          </span>
-
-
-          <span>
-            Where Ideas Flow Into Vision.
-          </span>
 
         </div>
 
 
       </div>
 
-    </footer>
+    </section>
 
 
-  </div>
+
+    <!-- ===================================================
+         CONTACT
+         =================================================== -->
+
+    <section
+      class="contact-section"
+      id="contact"
+    >
+
+      <div class="section-container">
+
+
+        <span
+          class="section-label"
+          data-te="కలుద్దాం"
+          data-en="CONNECT"
+        >
+          కలుద్దాం
+        </span>
+
+
+        <h2
+          data-te="ఒక ఆలోచన ఉందా?"
+          data-en="Have an idea?"
+        >
+
+          ఒక ఆలోచన ఉందా?
+
+        </h2>
+
+
+        <p
+          data-te="మనతో పంచుకోండి. ఒక చిన్న ఆలోచన మరో కొత్త ప్రపంచానికి మొదలు కావచ్చు."
+          data-en="Share it with us. A small idea can become the beginning of a new world."
+        >
+
+          మనతో పంచుకోండి.
+
+          ఒక చిన్న ఆలోచన
+          మరో కొత్త ప్రపంచానికి
+          మొదలు కావచ్చు.
+
+        </p>
+
+
+        <div class="home-contact-actions">
+
+
+          <a
+            href="mailto:YOUR_EMAIL@example.com"
+            class="contact-button"
+          >
+            ఈమెయిల్ →
+          </a>
+
+
+          <a
+            href="#"
+            class="contact-button"
+          >
+            WhatsApp →
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
 
 
 
   <!-- =====================================================
-       HOME PAGE JAVASCRIPT
+       FOOTER
        ===================================================== -->
 
-  <script src="assets/js/site-data.js"></script>
+  <footer class="site-footer">
 
-  <script src="assets/js/app.js"></script>
+    <div class="footer-inner">
 
+
+      <div class="footer-brand">
+
+
+        <div class="footer-logo">
+          GI
+        </div>
+
+
+        <div>
+
+          <strong>
+            GI Creative Space
+          </strong>
+
+          <p>
+            Godavari Roots • Ippanapadu Soul
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#home">
+          హోమ్
+        </a>
+
+        <a href="#panchabhutas">
+          పంచభూతాలు
+        </a>
+
+        <a href="#worlds">
+          ప్రపంచాలు
+        </a>
+
+        <a href="#projects">
+          మన పనులు
+        </a>
+
+        <a href="#contact">
+          సంప్రదించండి
+        </a>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          ©
+          <span id="current-year"></span>
+          GI Creative Space
+        </span>
+
+
+        <span>
+          Where Ideas Flow Into Vision.
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script
+    src="assets/js/site-data.js"
+  ></script>
+
+  <script
+    src="assets/js/app.js"
+  ></script>
+
+
+  <!-- =====================================================
+       HOME PAGE SCRIPT
+       ===================================================== -->
 
   <script>
 
@@ -807,97 +958,8 @@
       "DOMContentLoaded",
       () => {
 
-
-        /* ===============================================
-           ENTRY EXPERIENCE
-           =============================================== */
-
-        const entryScreen =
-          document.getElementById(
-            "entry-screen"
-          );
-
-
-        const homeWorld =
-          document.getElementById(
-            "home-world"
-          );
-
-
-        const enterButton =
-          document.getElementById(
-            "enter-space"
-          );
-
-
-        const entered =
-          sessionStorage.getItem(
-            "gi-space-entered"
-          );
-
-
-        if (entered === "true") {
-
-          entryScreen.classList.add(
-            "entry-complete"
-          );
-
-          homeWorld.classList.add(
-            "world-visible"
-          );
-
-        }
-
-
-        if (enterButton) {
-
-          enterButton.addEventListener(
-            "click",
-            () => {
-
-              sessionStorage.setItem(
-                "gi-space-entered",
-                "true"
-              );
-
-
-              entryScreen.classList.add(
-                "entry-exit"
-              );
-
-
-              setTimeout(
-                () => {
-
-                  homeWorld.classList.add(
-                    "world-visible"
-                  );
-
-                },
-                450
-              );
-
-
-              setTimeout(
-                () => {
-
-                  entryScreen.style.display =
-                    "none";
-
-                },
-                1300
-              );
-
-            }
-          );
-
-        }
-
-
-
-        /* ===============================================
-           BUILD HOME WORLD CARDS
-           =============================================== */
+        const site =
+          window.GI_SITE || {};
 
         const worldGrid =
           document.getElementById(
@@ -905,38 +967,34 @@
           );
 
 
-        const site =
-          window.GI_SITE || {};
-
+        /*
+         * Build five world cards
+         * from site-data.js
+         */
 
         if (
           worldGrid &&
           Array.isArray(site.worlds)
         ) {
 
-
           worldGrid.innerHTML =
             site.worlds
               .map(world => {
-
 
                 const name =
                   world.name?.te ||
                   world.name?.en ||
                   world.id;
 
-
                 const element =
                   world.element?.te ||
                   world.element?.en ||
                   "";
 
-
                 const description =
                   world.description?.te ||
                   world.description?.en ||
                   "";
-
 
                 return `
 
@@ -950,12 +1008,10 @@
                       style="
                         background-image:
                         linear-gradient(
-                          rgba(2,7,6,.18),
-                          rgba(2,7,6,.91)
+                          rgba(2,7,6,.15),
+                          rgba(2,7,6,.92)
                         ),
                         url('${world.image}');
-                        background-size: cover;
-                        background-position: center;
                       "
                     >
 
@@ -1005,7 +1061,6 @@
               .join("");
 
         }
-
 
       }
 
