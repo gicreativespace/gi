@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="GI Creative Space — Godavari Roots. Ippanapadu Soul."
+  >
+
+  <meta
+    name="theme-color"
+    content="#07141c"
+  >
+
+  <title>GI Creative Space</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       ENTRY / WELCOME SCREEN
+       ===================================================== -->
+
+  <div id="entry-screen" class="entry-screen">
+
+    <div class="entry-stars"></div>
+
+    <div class="entry-content">
+
+      <!-- Future: Replace with actual GI logo -->
+      <div class="entry-logo">
+        <span>GI</span>
+      </div>
+
+      <p class="entry-label">
+        GI CREATIVE SPACE
+      </p>
+
+      <h1>
+        ఒక కొత్త ప్రపంచంలోకి<br>
+        స్వాగతం
+      </h1>
+
+      <p class="entry-tagline">
+        Godavari Roots. Ippanapadu Soul.
+      </p>
+
+      <button
+        id="enter-space"
+        class="enter-button"
+        type="button"
+      >
+        ప్రపంచంలోకి ప్రవేశించండి
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MAIN WEBSITE
+       ===================================================== -->
+
+  <div id="site" class="site hidden">
+
+    <!-- ===================================================
+         HEADER
+         =================================================== -->
+
+    <header class="site-header">
+
+      <div class="header-inner">
+
+        <!-- LOGO -->
+        <a
+          href="#home"
+          class="brand"
+          aria-label="GI Creative Space Home"
+        >
+          <span class="brand-mark">GI</span>
+
+          <span class="brand-name">
+            Creative Space
+          </span>
+        </a>
+
+
+        <!-- MAIN NAVIGATION -->
+
+        <nav
+          class="main-nav"
+          id="main-navigation"
+          aria-label="ప్రధాన మెనూ"
+        >
+
+          <a href="#home">
+            హోమ్
+          </a>
+
+          <!-- Panchabhutas / Five Worlds -->
+
+          <button
+            type="button"
+            class="nav-worlds-button"
+            id="worlds-button"
+            aria-expanded="false"
+            aria-controls="worlds-menu"
+          >
+            విశ్వం
+          </button>
+
+          <a href="#projects">
+            ప్రాజెక్టులు
+          </a>
+
+          <a href="#contact">
+            సంప్రదించండి
+          </a>
+
+        </nav>
+
+
+        <!-- LANGUAGE SWITCH -->
+
+        <div class="language-switch">
+
+          <button
+            type="button"
+            class="language-button active"
+            data-language="te"
+          >
+            తెలుగు
+          </button>
+
+          <span>/</span>
+
+          <button
+            type="button"
+            class="language-button"
+            data-language="en"
+          >
+            EN
+          </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+          type="button"
+          class="mobile-menu-button"
+          id="mobile-menu-button"
+          aria-label="మెనూ తెరవండి"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+
+      <!-- =================================================
+           FIVE WORLDS DROPDOWN
+           ================================================= -->
+
+      <div
+        id="worlds-menu"
+        class="worlds-menu"
+        aria-hidden="true"
+      >
+
+        <div class="worlds-menu-inner">
+
+          <div class="worlds-intro">
+
+            <span>
+              పంచభూతాలు
+            </span>
+
+            <h2>
+              మన ఐదు ప్రపంచాలు
+            </h2>
+
+            <p>
+              ఒకే సృజనాత్మక విశ్వంలో ఐదు ప్రత్యేక శక్తులు.
+            </p>
+
+          </div>
+
+
+          <div class="worlds-mini-grid">
+
+            <!-- EARTH -->
+
+            <a
+              href="pages/education.html"
+              class="world-mini earth"
+            >
+
+              <span class="world-symbol">
+                ◉
+              </span>
+
+              <span class="world-element">
+                భూమి
+              </span>
+
+              <strong>
+                GI.Education
+              </strong>
+
+              <small>
+                నేర్చుకోవడం · ఎదగడం
+              </small>
+
+            </a>
+
+
+            <!-- WATER -->
+
+            <a
+              href="pages/writings.html"
+              class="world-mini water"
+            >
+
+              <span class="world-symbol">
+                ≋
+              </span>
+
+              <span class="world-element">
+                జలం
+              </span>
+
+              <strong>
+                GI.Writings
+              </strong>
+
+              <small>
+                కథలు · భావాలు
+              </small>
+
+            </a>
+
+
+            <!-- FIRE -->
+
+            <a
+              href="pages/devotional.html"
+              class="world-mini fire"
+            >
+
+              <span class="world-symbol">
+                ✦
+              </span>
+
+              <span class="world-element">
+                అగ్ని
+              </span>
+
+              <strong>
+                GI.Devotional
+              </strong>
+
+              <small>
+                భక్తి · సంప్రదాయం
+              </small>
+
+            </a>
+
+
+            <!-- AIR -->
+
+            <a
+              href="pages/media.html"
+              class="world-mini air"
+            >
+
+              <span class="world-symbol">
+                ∿
+              </span>
+
+              <span class="world-element">
+                వాయువు
+              </span>
+
+              <strong>
+                GI.Media
+              </strong>
+
+              <small>
+                AI · Video · Web · Branding
+              </small>
+
+            </a>
+
+
+            <!-- SPACE -->
+
+            <a
+              href="pages/space.html"
+              class="world-mini space"
+            >
+
+              <span class="world-symbol">
+                ✧
+              </span>
+
+              <span class="world-element">
+                ఆకాశం
+              </span>
+
+              <strong>
+                GI.Space
+              </strong>
+
+              <small>
+                Ideas · Experiments · Future
+              </small>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- ===================================================
+         MAIN CONTENT
+         =================================================== -->
+
+    <main id="home">
+
+
+      <!-- =================================================
+           HERO / GODAVARI WORLD
+           ================================================= -->
+
+      <section
+        class="hero"
+        id="hero"
+      >
+
+        <!-- Future image:
+             assets/images/godavari-hero.jpg -->
+
+        <div
+          class="hero-background"
+          aria-hidden="true"
+        ></div>
+
+        <div class="hero-overlay"></div>
+
+
+        <div class="hero-content">
+
+          <p class="hero-overline">
+            GI CREATIVE SPACE
+          </p>
+
+          <h1>
+            గోదావరి మూలాల నుంచి<br>
+            సృజనాత్మక విశ్వం వరకు
+          </h1>
+
+          <p class="hero-tagline">
+            Godavari Roots. Ippanapadu Soul.
+          </p>
+
+          <p class="hero-description">
+            మన ఊరి మట్టివాసన నుంచి ఆధునిక ఆలోచనల వరకు —
+            కథలు, సృజన, టెక్నాలజీ, భక్తి మరియు
+            భవిష్యత్తు ఆలోచనలకు ఒకే వేదిక.
+          </p>
+
+          <a
+            href="#worlds"
+            class="primary-button"
+          >
+            మన ప్రపంచాన్ని చూడండి
+          </a>
+
+        </div>
+
+
+        <div
+          class="hero-scroll"
+          aria-hidden="true"
+        >
+          <span>SCROLL</span>
+          <i></i>
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           OUR PHILOSOPHY
+           ================================================= -->
+
+      <section
+        class="philosophy-section"
+        id="philosophy"
+      >
+
+        <div class="section-container">
+
+          <p class="section-label">
+            మన ఆలోచన
+          </p>
+
+          <h2>
+            ఒకే విశ్వం.<br>
+            ఐదు సృజనాత్మక శక్తులు.
+          </h2>
+
+          <p class="section-description">
+            GI Creative Space అనేది కేవలం ఒక website కాదు.
+            గోదావరి మన గుర్తింపు, ఇప్పనపాడు మన మూలం,
+            సృజనాత్మకత మన ప్రయాణం.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           FIVE WORLDS
+           ================================================= -->
+
+      <section
+        class="worlds-section"
+        id="worlds"
+      >
+
+        <div class="section-container">
+
+          <div class="section-heading">
+
+            <p class="section-label">
+              పంచభూతాలు
+            </p>
+
+            <h2>
+              మన ఐదు ప్రపంచాలు
+            </h2>
+
+            <p>
+              ప్రకృతిలోని ఐదు శక్తుల స్ఫూర్తితో
+              మన సృజనాత్మక ప్రయాణంలోని ఐదు భాగాలు.
+            </p>
+
+          </div>
+
+
+          <div class="world-grid">
+
+
+            <!-- =========================================
+                 01 — EDUCATION / EARTH
+                 ========================================= -->
+
+            <article
+              class="world-card earth"
+              data-world="education"
+            >
+
+              <div class="world-card-visual">
+                <!-- Future image -->
+                <!-- assets/images/world-earth.jpg -->
+
+                <span class="element-number">
+                  01
+                </span>
+
+                <span class="element-symbol">
+                  ◉
+                </span>
+              </div>
+
+              <div class="world-card-content">
+
+                <span class="element-name">
+                  భూమి · EARTH
+                </span>
+
+                <h3>
+                  GI.Education
+                </h3>
+
+                <p>
+                  నేర్చుకోవడం, నైపుణ్యాలు,
+                  AI మరియు భవిష్యత్తు విద్య.
+                </p>
+
+                <a href="pages/education.html">
+                  ప్రపంచంలోకి వెళ్లండి →
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <!-- =========================================
+                 02 — WRITINGS / WATER
+                 ========================================= -->
+
+            <article
+              class="world-card water"
+              data-world="writings"
+            >
+
+              <div class="world-card-visual">
+
+                <!-- Future image -->
+                <!-- assets/images/world-water.jpg -->
+
+                <span class="element-number">
+                  02
+                </span>
+
+                <span class="element-symbol">
+                  ≋
+                </span>
+
+              </div>
+
+              <div class="world-card-content">
+
+                <span class="element-name">
+                  జలం · WATER
+                </span>
+
+                <h3>
+                  GI.Writings
+                </h3>
+
+                <p>
+                  కథలు, కవితలు, జ్ఞాపకాలు,
+                  ఆలోచనలు మరియు భావాలు.
+                </p>
+
+                <a href="pages/writings.html">
+                  ప్రపంచంలోకి వెళ్లండి →
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <!-- =========================================
+                 03 — DEVOTIONAL / FIRE
+                 ========================================= -->
+
+            <article
+              class="world-card fire"
+              data-world="devotional"
+            >
+
+              <div class="world-card-visual">
+
+                <!-- Future image -->
+                <!-- assets/images/world-fire.jpg -->
+
+                <span class="element-number">
+                  03
+                </span>
+
+                <span class="element-symbol">
+                  ✦
+                </span>
+
+              </div>
+
+              <div class="world-card-content">
+
+                <span class="element-name">
+                  అగ్ని · FIRE
+                </span>
+
+                <h3>
+                  GI.Devotional
+                </h3>
+
+                <p>
+                  భక్తి, పండుగలు,
+                  సంప్రదాయాలు మరియు ఆధ్యాత్మిక కథలు.
+                </p>
+
+                <a href="pages/devotional.html">
+                  ప్రపంచంలోకి వెళ్లండి →
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <!-- =========================================
+                 04 — MEDIA / AIR
+                 ========================================= -->
+
+            <article
+              class="world-card air"
+              data-world="media"
+            >
+
+              <div class="world-card-visual">
+
+                <!-- Future image -->
+                <!-- assets/images/world-air.jpg -->
+
+                <span class="element-number">
+                  04
+                </span>
+
+                <span class="element-symbol">
+                  ∿
+                </span>
+
+              </div>
+
+              <div class="world-card-content">
+
+                <span class="element-name">
+                  వాయువు · AIR
+                </span>
+
+                <h3>
+                  GI.Media
+                </h3>
+
+                <p>
+                  AI వీడియోలు, వెబ్ డిజైన్,
+                  బ్రాండింగ్ మరియు డిజిటల్ క్రియేషన్స్.
+                </p>
+
+                <a href="pages/media.html">
+                  ప్రపంచంలోకి వెళ్లండి →
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <!-- =========================================
+                 05 — SPACE / SPACE
+                 ========================================= -->
+
+            <article
+              class="world-card cosmic"
+              data-world="space"
+            >
+
+              <div class="world-card-visual">
+
+                <!-- Future image -->
+                <!-- assets/images/world-space.jpg -->
+
+                <span class="element-number">
+                  05
+                </span>
+
+                <span class="element-symbol">
+                  ✧
+                </span>
+
+              </div>
+
+              <div class="world-card-content">
+
+                <span class="element-name">
+                  ఆకాశం · SPACE
+                </span>
+
+                <h3>
+                  GI.Space
+                </h3>
+
+                <p>
+                  కొత్త ఆలోచనలు, ప్రయోగాలు,
+                  AI కాన్సెప్ట్స్ మరియు భవిష్యత్తు ప్రాజెక్టులు.
+                </p>
+
+                <a href="pages/space.html">
+                  ప్రపంచంలోకి వెళ్లండి →
+                </a>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           PROJECTS
+           ================================================= -->
+
+      <section
+        class="projects-section"
+        id="projects"
+      >
+
+        <div class="section-container">
+
+          <div class="section-heading">
+
+            <p class="section-label">
+              మన పని
+            </p>
+
+            <h2>
+              ప్రాజెక్టులు
+            </h2>
+
+            <p>
+              మన ఐదు ప్రపంచాల నుంచి పుట్టిన
+              కొన్ని సృజనాత్మక ప్రయాణాలు.
+            </p>
+
+          </div>
+
+
+          <!-- Project filters -->
+
+          <div
+            class="project-filters"
+            role="tablist"
+            aria-label="Project filters"
+          >
+
+            <button
+              type="button"
+              class="filter-button active"
+              data-filter="all"
+            >
+              అన్నీ
+            </button>
+
+            <button
+              type="button"
+              class="filter-button"
+              data-filter="media"
+            >
+              Media
+            </button>
+
+            <button
+              type="button"
+              class="filter-button"
+              data-filter="writings"
+            >
+              Writings
+            </button>
+
+            <button
+              type="button"
+              class="filter-button"
+              data-filter="devotional"
+            >
+              Devotional
+            </button>
+
+            <button
+              type="button"
+              class="filter-button"
+              data-filter="education"
+            >
+              Education
+            </button>
+
+            <button
+              type="button"
+              class="filter-button"
+              data-filter="space"
+            >
+              Space
+            </button>
+
+          </div>
+
+
+          <!-- Dynamic project container -->
+
+          <div
+            id="projects-grid"
+            class="projects-grid"
+          >
+
+            <!-- Projects will be loaded from site-data.js -->
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           CONTACT
+           ================================================= -->
+
+      <section
+        class="contact-section"
+        id="contact"
+      >
+
+        <div class="section-container">
+
+          <p class="section-label">
+            కలిసి సృష్టిద్దాం
+          </p>
+
+          <h2>
+            మీ ఆలోచనతో రండి.
+          </h2>
+
+          <p>
+            దానికి ఒక రూపం కలిసి సృష్టిద్దాం.
+          </p>
+
+
+          <div class="contact-actions">
+
+            <a
+              href="#"
+              id="email-link"
+              class="contact-button"
+            >
+              ఈమెయిల్
+            </a>
+
+            <a
+              href="#"
+              id="whatsapp-link"
+              class="contact-button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
+
+            <a
+              href="#"
+              id="social-link"
+              class="contact-button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              సోషల్ మీడియా
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- ===================================================
+         FOOTER
+         =================================================== -->
+
+    <footer class="site-footer">
+
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+
+          <span class="footer-logo">
+            GI
+          </span>
+
+          <div>
+
+            <strong>
+              GI Creative Space
+            </strong>
+
+            <p>
+              Godavari Roots. Ippanapadu Soul.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <a href="#home">
+            హోమ్
+          </a>
+
+          <a href="#worlds">
+            విశ్వం
+          </a>
+
+          <a href="#projects">
+            ప్రాజెక్టులు
+          </a>
+
+          <a href="#contact">
+            సంప్రదించండి
+          </a>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+          <span>
+            © <span id="current-year"></span>
+            GI Creative Space
+          </span>
+
+          <span>
+            Made with ideas & imagination.
+          </span>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
